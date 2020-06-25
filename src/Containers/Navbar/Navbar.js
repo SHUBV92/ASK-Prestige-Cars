@@ -24,7 +24,8 @@ const NavToolBar = () => (
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link href="#/">Home</Nav.Link>
+        <Nav.Link href="#/">Hospecta
+        e</Nav.Link>
         <Nav.Link href="#link">Make Booking</Nav.Link>
         <Nav.Link href="#link">Sign In</Nav.Link>
         <Nav.Link href="#link">Make Booking</Nav.Link>
