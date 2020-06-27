@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CardView from "../../Components/Card/Card.jsx";
+import { Details, Info } from "./ManageBookings.styles";
 
 const ManageBookings = () => {
   const [name, setName] = useState(" ");
@@ -30,7 +31,7 @@ const ManageBookings = () => {
   };
 
   const addBookings = () => {
-    console.log("A", bookings)
+    console.log("A", bookings);
     setBookings(
       bookings.concat({
         name: name,
@@ -38,64 +39,62 @@ const ManageBookings = () => {
         date: date,
       })
     );
-    console.log("B", bookings)
-
+    console.log("B", bookings);
   };
 
   return (
     <div>
-      <h1>Make a Booking</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Name</label>
-        <input
-          type="text"
-          value={name}
-          onChange={handleNameChange}
-          name="name"
-          placeholder="Name"
-        />
+      <Info>
+        <h1>Make a Booking</h1>
 
-        <br />
-        <label>Last Name</label>
-        <input
-          type="text"
-          value={lastName}
-          onChange={handleLastChange}
-          name="last"
-          placeholder="Last Name"
-        />
+        <form onSubmit={handleSubmit}>
+          <label>Name</label>
+          <input
+            type="text"
+            value={name}
+            onChange={handleNameChange}
+            name="name"
+            placeholder="Name"
+          />
 
-        <br />
-        <label>Date</label>
-        <input
-          type="date"
-          value={date}
-          onChange={handleDateChange}
-          name="date"
-          placeholder="Enter your dates"
-        />
+          <br />
+          <label>Last Name</label>
+          <input
+            type="text"
+            value={lastName}
+            onChange={handleLastChange}
+            name="last"
+            placeholder="Last Name"
+          />
+          <br />
+          <label>Date</label>
+          <input
+            type="date"
+            value={date}
+            onChange={handleDateChange}
+            name="date"
+            placeholder="Enter your dates"
+          />
+          <br />
+          <button onClick={addBookings}>
+            submit
+          </button>
+        </form>
+      </Info>
+      <hr />
 
-        <button onClick={addBookings}>
-          submit
-        </button>
-      </form>
-      {console.log("Bookings", bookings)}
-      
-      {(bookings.length === 0) ? "loading....."
-      
-      : bookings.map((booking) => (
-      
-        // <div>
-        //   <h2>{booking.name}</h2>
-        //   <h2>{booking.lastName}</h2>
-        //   <h2>{booking.date}</h2>
-        // </div>
-      
-    
-      <CardView 
-      booking={booking}
-      />
-      ))}
+     
+
+      <hr />
+      <h2>Bookings</h2>
+      {bookings.length === 0
+        ? "loading....."
+        : bookings.map((booking, index) => (
+            <CardView
+              booking={booking}
+              index={index + 1}
+            />
+          ))}
     </div>
   );
 };

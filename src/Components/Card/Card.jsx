@@ -12,7 +12,7 @@ const CardView = (props) => (
 
 
     <Card>
-      <Card.Header>Bookings</Card.Header>
+    <Card.Header>Booking: {props.index}</Card.Header>
       <Card.Body>
         <Card.Title>Name: {props.booking.name}</Card.Title>
         <Card.Text>
