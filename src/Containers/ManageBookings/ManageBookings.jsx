@@ -1,26 +1,39 @@
 import React from "react";
 
-const ManageBookings = () => (
+const ManageBookings = () => {
+  
+  const handlechange = event => {
 
-    <div>
+  }
+  
+  
+  return(
+  <div>
+    <h1>Make a Booking</h1>
+    <form>
+      <label>Name</label>
       <input
-        name="Name"
         type="text"
+        name="name"
         placeholder="Name"
       />
-
+      
+      <label>Last Name</label>
       <input
-        name="Last"
         type="text"
+        name="last"
         placeholder="Last Name"
       />
 
+      <label>Last Name</label>
       <input
+        type="date"
         name="date"
-        type="text"
-        placeholder="Name"
+        placeholder="Enter your dates"
       />
-    </div>
-  );
+    </form>
+  </div>
+  )
+  };
 
 export default ManageBookings;

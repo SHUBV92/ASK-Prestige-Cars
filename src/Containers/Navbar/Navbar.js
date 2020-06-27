@@ -16,7 +16,6 @@ const NavToolBar = () => (
   //   "ARTICLES",
   //   "GET IN TOUCH"
   // ];
-
   <Navbar bg="light" expand="lg">
     <Navbar.Brand href="#home">
         ASK Prestige
@@ -24,11 +23,9 @@ const NavToolBar = () => (
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link href="#/">Hospecta
-        e</Nav.Link>
-        <Nav.Link href="#link">Make Booking</Nav.Link>
-        <Nav.Link href="#link">Sign In</Nav.Link>
-        <Nav.Link href="#link">Make Booking</Nav.Link>
+        <Nav.Link href="/home">Home</Nav.Link>
+        <Nav.Link href="/signin">Sign In</Nav.Link>
+        <Nav.Link href="/bookings">Make Booking</Nav.Link>
         
         <NavDropdown
           title="Dropdown"
