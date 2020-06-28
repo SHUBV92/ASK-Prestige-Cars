@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CardView from "../../Components/Card/Card.jsx";
 import { Details, Info } from "./ManageBookings.styles";
+import Maps from "../Maps/Maps";
 
 const ManageBookings = () => {
   const [name, setName] = useState(" ");
@@ -83,7 +84,7 @@ const ManageBookings = () => {
       </Info>
       <hr />
 
-     
+     <Maps />
 
       <hr />
       <h2>Bookings</h2>
