@@ -84,18 +84,18 @@ const ManageBookings = () => {
       </Info>
       <hr />
 
-     <Maps />
 
       <hr />
       <h2>Bookings</h2>
       {bookings.length === 0
         ? "loading....."
         : bookings.map((booking, index) => (
-            <CardView
-              booking={booking}
-              index={index + 1}
-            />
+          <CardView
+          booking={booking}
+          index={index + 1}
+          />
           ))}
+          <Maps />
     </div>
   );
 };
