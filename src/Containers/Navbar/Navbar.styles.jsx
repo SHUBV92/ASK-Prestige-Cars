@@ -8,4 +8,11 @@ border-radius:10px;
 
 export const NavLinks = styled.div`
 padding-left:10px;
+
+.booking {
+    margin-right:100px;
+    h2{
+        padding-left:100px;
+    }
+}
 `

@@ -7,6 +7,8 @@ return(
 
         <p>Prestige Cars sending cars to Heathrow</p>
 
+        <img src={require(`../../assets/logo.jpeg`)} />
+
         <h2>Testimonials</h2>
         <p>"Had a great experience with ASK Prestige"</p>
     </div>

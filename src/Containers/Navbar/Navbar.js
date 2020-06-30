@@ -28,7 +28,6 @@ const NavToolBar = () => (
       <Nav className="mr-auto">
         <Nav.Link href="/home">Home</Nav.Link>
         <Nav.Link href="/signin">Sign In</Nav.Link>
-        <Nav.Link href="/bookings">Make Booking</Nav.Link>
         
         <NavDropdown
           title="Dropdown"
@@ -38,17 +37,11 @@ const NavToolBar = () => (
             Skills
           </NavDropdown.Item>
         </NavDropdown>
+        <Nav.Link href="/bookings" >
+          <h3>Make Booking</h3>
+          </Nav.Link>
       </Nav>
-      <Form inline>
-        <FormControl
-          type="text"
-          placeholder="Search"
-          className="mr-sm-2"
-        />
-        <Button variant="outline-success">
-          Search
-        </Button>
-      </Form>
+     
     </Navbar.Collapse>
     </NavLinks>
   </Navbar>
