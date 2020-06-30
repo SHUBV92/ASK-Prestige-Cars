@@ -1,4 +1,5 @@
 import React from 'react'
+import Business from '../Business/Business'
 
 const Intro = () => {
 return(
@@ -11,6 +12,8 @@ return(
 
         <h2>Testimonials</h2>
         <p>"Had a great experience with ASK Prestige"</p>
+
+        <Business />
     </div>
 )
 

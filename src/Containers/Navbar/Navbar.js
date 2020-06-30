@@ -7,18 +7,14 @@ import {
   Button,
   Nav
 } from "react-bootstrap";
-import { Img, NavLinks } from './Navbar.styles'
+import { Container, Img, NavLinks } from './Navbar.styles'
 
 const NavToolBar = () => (
-  // let navRoutes = [
-  //   "SUMMARY",
-  //   "SKILLS",
-  //   "PROJECTS",
-  //   "ARTICLES",
-  //   "GET IN TOUCH"
-  // ];
+<Container>
   <Navbar bg="light" expand="lg">
+    <Nav.Link href="/home">
     <Img src={require(`../../assets/logo.jpeg`)} />
+    </Nav.Link>
     <NavLinks>
     <Navbar.Brand href="#home">
         ASK Prestige
@@ -45,6 +41,7 @@ const NavToolBar = () => (
     </Navbar.Collapse>
     </NavLinks>
   </Navbar>
+  </Container>
 );
 
 export default NavToolBar;
