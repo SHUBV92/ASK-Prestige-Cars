@@ -7,6 +7,7 @@ import {
   Button,
   Nav
 } from "react-bootstrap";
+import { Img, NavLinks } from './Navbar.styles'
 
 const NavToolBar = () => (
   // let navRoutes = [
@@ -17,6 +18,8 @@ const NavToolBar = () => (
   //   "GET IN TOUCH"
   // ];
   <Navbar bg="light" expand="lg">
+    <Img src={require(`../../assets/logo.jpeg`)} />
+    <NavLinks>
     <Navbar.Brand href="#home">
         ASK Prestige
     </Navbar.Brand>
@@ -47,6 +50,7 @@ const NavToolBar = () => (
         </Button>
       </Form>
     </Navbar.Collapse>
+    </NavLinks>
   </Navbar>
 );
 
