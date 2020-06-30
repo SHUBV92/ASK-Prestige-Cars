@@ -5,7 +5,7 @@ return(
     <div>
         <h1>ASK Prestige Cars</h1>
 
-        <p>Prestige Cars sending cars to Heathrow</p>
+        <p>Our Service. Your Experience</p>
 
         <img src={require(`../../assets/logo.jpeg`)} />
 

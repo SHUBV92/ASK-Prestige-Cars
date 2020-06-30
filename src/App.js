@@ -10,6 +10,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Footer from "./Containers/Footer/Footer";
 
 class App extends Component {
   constructor() {
@@ -34,6 +35,8 @@ class App extends Component {
               <ManageBookings />
             </Route>
           </Switch>
+
+          <Footer />
         </Router>
       </div>
     );
