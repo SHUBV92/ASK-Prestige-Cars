@@ -7,7 +7,8 @@
         "make": "Ford",
         "model": "Galaxy",
         "seats": "7",
-        "engine-size": "2 litres"
+        "engine-size": "2 litres",
+        "description":"An excellent choice "
 
       }
     ]

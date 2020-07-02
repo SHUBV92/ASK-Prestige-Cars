@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import NavToolBar from "./Containers/Navbar/Navbar";
 import Intro from "./Containers/Intro/Intro";
-import ManageBookings from "./Containers/ManageBookings/ManageBookings";
+import ManageBookings from "./Containers/ManageBookings/BookingContainer/ManageBookings";
 
 import {
   BrowserRouter as Router,

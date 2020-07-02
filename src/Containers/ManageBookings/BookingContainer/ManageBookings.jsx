@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import CardView from "../../Components/Card/Card.jsx";
-import { Details, Info } from "./ManageBookings.styles";
-import Maps from "../Maps/Maps";
+import CardView from "../../../Components/Card/Card.jsx";
+import { Container, Details, Info } from "./ManageBookings.styles";
+import Maps from "../../Maps/Maps";
 
 const ManageBookings = () => {
   const [name, setName] = useState(" ");
@@ -44,7 +44,7 @@ const ManageBookings = () => {
   };
 
   return (
-    <div>
+    <Container>
       <Info>
         <h1>Make a Booking</h1>
 
@@ -96,7 +96,7 @@ const ManageBookings = () => {
           />
           ))}
           <Maps />
-    </div>
+    </Container>
   );
 };
 

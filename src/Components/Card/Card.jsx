@@ -10,7 +10,6 @@ const CardView = (props) => (
         </Image> */}
     {console.log("Props", props)}
 
-
     <Card>
     <Card.Header>Booking: {props.index}</Card.Header>
       <Card.Body>
