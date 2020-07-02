@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CardView from "../../../Components/Card/Card.jsx";
 import { Container, Details, Info } from "./ManageBookings.styles";
 import Maps from "../../Maps/Maps";
+import ChooseCar from "../ChooseCar/ChooseCar.jsx";
 
 const ManageBookings = () => {
   const [name, setName] = useState(" ");
@@ -95,7 +96,8 @@ const ManageBookings = () => {
           index={index + 1}
           />
           ))}
-          <Maps />
+          {/* <Maps /> */}
+          <ChooseCar />
     </Container>
   );
 };
