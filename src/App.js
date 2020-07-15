@@ -21,14 +21,13 @@ class App extends Component {
       <div className="App">
         <Router>
           <NavToolBar />
-
+          <ManageBookings />
+          <Intro />
           <Switch>
-            <Route path="/home">
-              <Intro />
+            <Route path="/bookings">
             </Route>
 
-            <Route path="/bookings">
-              <ManageBookings />
+            <Route path="/home">
             </Route>
 
             <Route path="/bookings">

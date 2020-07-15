@@ -8,7 +8,8 @@
         "model": "Galaxy",
         "seats": "7",
         "engine-size": "2 litres",
-        "description":"An excellent choice "
+        "image": "Galaxy",
+        "description":"A & Seater Vehicle by ASK Prestige" 
 
       }
     ]
@@ -22,7 +23,10 @@
         "make": "Lexus",
         "model": "IS300",
         "seats": "5",
-        "engine-size": "2 litres"
+        "engine-size": "2 litres",
+        "image":"Lexus", 
+        "description": "A Luxury Vehicle by ASK Prestige"
+        
 
       }
     ]
@@ -37,8 +41,9 @@
         "make": "BMW",
         "model": "5 Series",
         "seats": "5",
-        "engine-size": "3 litres"
-
+        "engine-size": "3 litres",
+        "image":"LexusSunset",
+        "description": "A Luxury Vehicle by ASK Prestige"
       }
     ]
   }

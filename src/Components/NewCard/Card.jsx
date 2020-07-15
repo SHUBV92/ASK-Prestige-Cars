@@ -5,11 +5,11 @@ import {
   CardContainer,
 } from "./Card.styles";
 
-const Card = ({name}) => {
+const Card = ({name, image}) => {
   return (
     <CardApp>
       <Image
-        src={require(`../../assets/bmw.jpg`)}
+        src={require(`../../assets/${image}.jpeg`)}
       />
       <CardContainer>
         <h4>{name}</h4>

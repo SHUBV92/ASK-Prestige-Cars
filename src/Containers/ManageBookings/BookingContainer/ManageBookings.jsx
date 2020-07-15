@@ -1,8 +1,23 @@
 import React, { useState } from "react";
 import CardView from "../../../Components/Card/Card.jsx";
-import { Container, Details, Info } from "./ManageBookings.styles";
+import {
+  Container,
+  Details,
+  Info,
+  Input,
+  InputContainer,
+  SearchButton
+} from "./ManageBookings.styles";
 import Maps from "../../Maps/Maps";
 import ChooseCar from "../ChooseCar/ChooseCar.jsx";
+import JourneyDetails from "../JourneyDetails/JourneyDetails.jsx";
+import {
+  InputGroup,
+  FormControl,
+  Button,
+  DropdownButton,
+  Dropdown
+} from "react-bootstrap";
 
 const ManageBookings = () => {
   const [name, setName] = useState(" ");
@@ -49,7 +64,106 @@ const ManageBookings = () => {
       <Info>
         <h1>Make a Booking</h1>
 
-        <form onSubmit={handleSubmit}>
+        <InputContainer>
+          <Input>
+            <InputGroup>
+              <FormControl
+                placeholder="Pickup Address"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+
+              <DropdownButton
+                as={InputGroup.Append}
+                variant="outline-secondary"
+                title=""
+                id="input-group-dropdown-2"
+                className="dropdownButton"
+              >
+                <Dropdown.Item href="#">
+                  Action
+                </Dropdown.Item>
+                <Dropdown.Item href="#">
+                  Another action
+                </Dropdown.Item>
+                <Dropdown.Item href="#">
+                  Something else here
+                </Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#">
+                  Separated link
+                </Dropdown.Item>
+              </DropdownButton>
+            </InputGroup>
+            <br />
+            <InputGroup>
+              <FormControl
+                placeholder="Destination Address"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+
+              <DropdownButton
+                as={InputGroup.Append}
+                variant="outline-secondary"
+                title=""
+                id="input-group-dropdown-2"
+              >
+                <Dropdown.Item href="#">
+                  Action
+                </Dropdown.Item>
+                <Dropdown.Item href="#">
+                  Another action
+                </Dropdown.Item>
+                <Dropdown.Item href="#">
+                  Something else here
+                </Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#">
+                  Separated link
+                </Dropdown.Item>
+              </DropdownButton>
+            </InputGroup>
+
+            <br />
+
+            <InputGroup>
+              <FormControl
+                placeholder="Destination Address"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+
+              <DropdownButton
+                as={InputGroup.Append}
+                variant="outline-secondary"
+                title=""
+                id="input-group-dropdown-2"
+              >
+                <Dropdown.Item href="#">
+                  Action
+                </Dropdown.Item>
+                <Dropdown.Item href="#">
+                  Another action
+                </Dropdown.Item>
+                <Dropdown.Item href="#">
+                  Something else here
+                </Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#">
+                  Separated link
+                </Dropdown.Item>
+              </DropdownButton>
+            </InputGroup>
+
+            <br />
+            <SearchButton>
+              <Button>Search</Button>
+            </SearchButton>
+          </Input>
+        </InputContainer>
+
+        {/* <form onSubmit={handleSubmit}>
           <label>Name</label>
           <input
             type="text"
@@ -81,23 +195,23 @@ const ManageBookings = () => {
           <button onClick={addBookings}>
             submit
           </button>
-        </form>
+        </form> */}
       </Info>
       <hr />
 
-
       <hr />
-      <h2>Bookings</h2>
+      {/* <h2>Bookings</h2>
       {bookings.length === 0
         ? "loading....."
         : bookings.map((booking, index) => (
-          <CardView
-          booking={booking}
-          index={index + 1}
-          />
-          ))}
-          {/* <Maps /> */}
-          <ChooseCar />
+            <CardView
+              booking={booking}
+              index={index + 1}
+            />
+          ))} */}
+      {/* <Maps /> */}
+      {/* <JourneyDetails /> */}
+      {/* <ChooseCar /> */}
     </Container>
   );
 };

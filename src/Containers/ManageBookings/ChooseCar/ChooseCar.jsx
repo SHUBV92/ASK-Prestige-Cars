@@ -7,7 +7,14 @@ const ChooseCar = () => {
     <div>
       <h1>Choose Your Service</h1>
       {CarData.map((car) => {
-        return <Card name={car.name} />;
+        return(
+        car.cars.map(item => (
+           <Card 
+          name={item.name} 
+          image={item.image}
+          />
+        ))
+        )
       })}
     </div>
   );

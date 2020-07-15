@@ -1,15 +1,17 @@
 import React from "react";
+import {Container} from "./JourneyDetails.styles"
 
 const JourneyDetails = () => {
   return (
-    <Details>
+    <Container>
       <h2>JOURNEY DETAILS</h2>
-      <form onSubmit={handleSubmit}>
+      <form >
+      {/* onSubmit={handleSubmit}> */}
         <label>PICK UP</label>
         <input
           type="text"
-          value={name}
-          onChange={handleNameChange}
+          // value={name}
+          // onChange={handleNameChange}
           name="name"
           placeholder="Enter location"
         />
@@ -18,13 +20,13 @@ const JourneyDetails = () => {
         <label>DROP OFF</label>
         <input
           type="text"
-          value={name}
-          onChange={handleNameChange}
+          // value={name}
+          // onChange={handleNameChange}
           name="name"
           placeholder="Enter location"
         />
       </form>
-    </Details>
+    </Container>
   );
 };
 

@@ -24,15 +24,21 @@ const NavToolBar = () => (
       <Nav className="mr-auto">
         <Nav.Link href="/home">Home</Nav.Link>
         <Nav.Link href="/signin">Sign In</Nav.Link>
+        <Nav.Link href="/home">Business</Nav.Link>
+        <Nav.Link href="/home">Services</Nav.Link>
+        <Nav.Link href="/home">About</Nav.Link>
+        <Nav.Link href="/home">Contact Us</Nav.Link>
+
+
         
-        <NavDropdown
+        {/* <NavDropdown
           title="Dropdown"
           id="basic-nav-dropdown"
         >
           <NavDropdown.Item href="/skills">
             Skills
           </NavDropdown.Item>
-        </NavDropdown>
+        </NavDropdown> */}
         <Nav.Link href="/bookings" >
           <h3>Make Booking</h3>
           </Nav.Link>
