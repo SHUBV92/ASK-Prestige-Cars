@@ -11,6 +11,7 @@ import {
   Route,
 } from "react-router-dom";
 import Footer from "./Containers/Footer/Footer";
+import ChooseCar from "./Containers/ManageBookings/ChooseCar/ChooseCar";
 
 class App extends Component {
   constructor() {
@@ -23,6 +24,7 @@ class App extends Component {
           <NavToolBar />
           <ManageBookings />
           <Intro />
+          <ChooseCar />
           <Switch>
             <Route path="/bookings">
             </Route>

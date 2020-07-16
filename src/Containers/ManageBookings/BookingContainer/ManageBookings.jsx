@@ -6,7 +6,8 @@ import {
   Info,
   Input,
   InputContainer,
-  SearchButton
+  SearchButton,
+  Price
 } from "./ManageBookings.styles";
 import Maps from "../../Maps/Maps";
 import ChooseCar from "../ChooseCar/ChooseCar.jsx";
@@ -129,7 +130,8 @@ const ManageBookings = () => {
 
             <InputGroup>
               <FormControl
-                placeholder="Destination Address"
+                placeholder="Date & Time"
+                type="date"
                 aria-label="Recipient's username"
                 aria-describedby="basic-addon2"
               />
@@ -155,6 +157,9 @@ const ManageBookings = () => {
                 </Dropdown.Item>
               </DropdownButton>
             </InputGroup>
+            <Price>
+              £70.00
+            </Price>
 
             <br />
             <SearchButton>
@@ -209,7 +214,6 @@ const ManageBookings = () => {
               index={index + 1}
             />
           ))} */}
-      {/* <Maps /> */}
       {/* <JourneyDetails /> */}
       {/* <ChooseCar /> */}
     </Container>

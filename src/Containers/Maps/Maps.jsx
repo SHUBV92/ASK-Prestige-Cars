@@ -9,11 +9,12 @@ import {
 
 const mapStyles = {
   boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
-  marginTop: "60px",
-  marginLeft: "60px",
-  width: "90%",
-  height: "500px",
-  borderRadius: "20px",
+  paddingTop: "50px",
+  paddingLeft: "50px",
+  paddingRight: "20px",
+  width: "60%",
+  height: "60%",
+  // borderRadius: "20px",
 };
 
 export class MapContainer extends Component {
