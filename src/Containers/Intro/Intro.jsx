@@ -4,7 +4,7 @@ import { Container } from "./Intro.styles";
 
 const Intro = () => {
   return (
-    <Container>
+    <Container id="about">
       <h1>About Us</h1>
 
       <p>Executive minicab service</p>

@@ -1,17 +1,21 @@
+// Packages
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import NavToolBar from "./Containers/Navbar/Navbar";
-import Intro from "./Containers/Intro/Intro";
-import ManageBookings from "./Containers/ManageBookings/BookingContainer/ManageBookings";
-
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import Footer from "./Containers/Footer/Footer";
+import { Element } from "react-scroll";
+
+// Components
+import NavToolBar from "./Containers/Navbar/Navbar";
+import ManageBookings from "./Containers/ManageBookings/BookingContainer/ManageBookings";
+import Intro from "./Containers/Intro/Intro";
 import ChooseCar from "./Containers/ManageBookings/ChooseCar/ChooseCar";
+import Footer from "./Containers/Footer/Footer";
+
+// Styling
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -23,14 +27,14 @@ class App extends Component {
         <Router>
           <NavToolBar />
           <ManageBookings />
-          <Intro />
+          <Element id="Intro" name="Intro">
+            <Intro />
+          </Element>
           <ChooseCar />
           <Switch>
-            <Route path="/bookings">
-            </Route>
+            <Route path="/bookings"></Route>
 
-            <Route path="/home">
-            </Route>
+            <Route path="/home"></Route>
 
             <Route path="/bookings">
               <ManageBookings />

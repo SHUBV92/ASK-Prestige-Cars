@@ -1,53 +1,118 @@
+// Packages
 import React from "react";
+
 import {
   Navbar,
   NavDropdown,
   Form,
   FormControl,
   Button,
-  Nav
+  Nav,
 } from "react-bootstrap";
-import { Container, Img, NavLinks } from './Navbar.styles'
+import {
+  Container,
+  Img,
+  NavLinks,
+} from "./Navbar.styles";
+
+import {
+  Link,
+  animateScroll as scroll,
+} from "react-scroll";
 
 const NavToolBar = () => (
-<Container>
-  <Navbar bg="light" expand="lg">
-    <Nav.Link href="/home">
-    <Img src={require(`../../assets/logo.jpeg`)} />
-    </Nav.Link>
-    <NavLinks>
-    <Navbar.Brand href="#home">
-        ASK Prestige
-    </Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto">
-        <Nav.Link href="/home">Home</Nav.Link>
-        <Nav.Link href="/signin">Sign In</Nav.Link>
-        <Nav.Link href="/home">Business</Nav.Link>
-        <Nav.Link href="/home">Services</Nav.Link>
-        <Nav.Link href="/home">About</Nav.Link>
-        <Nav.Link href="/home">Contact Us</Nav.Link>
+  <Container>
+    <Navbar bg="light" expand="lg">
+      <Nav.Link href="/home">
+        <Img
+          src={require(`../../assets/logo.jpeg`)}
+        />
+      </Nav.Link>
+      <NavLinks>
+        <Navbar.Brand href="#home">
+          ASK Prestige
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            {/* About */}
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="A bout"
+              activClass="some-active-class"
+            >
+              <Nav.Link href="/home">
+                About
+              </Nav.Link>
+            </Link>
 
+            {/* Services */}
+            <Link
+              to="services"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="A bout"
+              activClass="some-active-class"
+            >
+              <Nav.Link href="/home">
+                Services
+              </Nav.Link>
+            </Link>
 
-        
-        {/* <NavDropdown
-          title="Dropdown"
-          id="basic-nav-dropdown"
-        >
-          <NavDropdown.Item href="/skills">
-            Skills
-          </NavDropdown.Item>
-        </NavDropdown> */}
-        <Nav.Link href="/bookings" >
-          <h3>Make Booking</h3>
-          </Nav.Link>
-      </Nav>
-     
-    </Navbar.Collapse>
-    </NavLinks>
-  </Navbar>
+            {/* Our Cars */}
+            <Link
+              to="cars"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="About"
+              activClass="some-active-class"
+            >
+              <Nav.Link href="/home">
+                Our Cars
+              </Nav.Link>
+            </Link>
+
+            {/* <Nav.Link href="/home">
+              Contact Us
+            </Nav.Link> */}
+
+            <Nav.Link href="/bookings">
+              <h3>Make Booking</h3>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </NavLinks>
+    </Navbar>
   </Container>
 );
 
 export default NavToolBar;
+
+{
+  /* <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/signin">
+              Sign In
+            </Nav.Link> 
+          
+           <Nav.Link href="/home">
+              <Link
+                to="/"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="About"
+                activClass="some-active-class"
+              >
+                About
+              </Link>
+            </Nav.Link>
+          
+          
+          
+          */
+}

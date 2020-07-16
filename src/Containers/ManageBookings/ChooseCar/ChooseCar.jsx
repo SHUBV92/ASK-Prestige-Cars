@@ -5,7 +5,7 @@ import { Carousel } from "react-bootstrap";
 
 const ChooseCar = () => {
   return (
-    <div>
+    <div id="cars">
       <h1>Our Cars</h1>
       {/* {CarData.map((car) => { */}
         {/* return car.cars.map((item) => ( */}
