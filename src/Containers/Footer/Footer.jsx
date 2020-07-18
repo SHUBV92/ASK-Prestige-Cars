@@ -13,7 +13,7 @@ const Footer = () => {
       <h4>Address</h4>
       <h5>Rainham Road, RM13 7SD </h5>
       
-      <Maps />
+      {/* <Maps /> */}
 
     </Container>
   );

@@ -7,7 +7,7 @@ import {
   Input,
   InputContainer,
   SearchButton,
-  Price
+  Price,
 } from "./ManageBookings.styles";
 import Maps from "../../Maps/Maps";
 import ChooseCar from "../ChooseCar/ChooseCar.jsx";
@@ -17,7 +17,7 @@ import {
   FormControl,
   Button,
   DropdownButton,
-  Dropdown
+  Dropdown,
 } from "react-bootstrap";
 
 const ManageBookings = () => {
@@ -157,13 +157,11 @@ const ManageBookings = () => {
                 </Dropdown.Item>
               </DropdownButton>
             </InputGroup>
-            <Price>
-              £70.00
-            </Price>
+            <Price>£70.00</Price>
 
             <br />
             <SearchButton>
-              <Button>Search</Button>
+              <Button variant="danger">Search</Button>
             </SearchButton>
           </Input>
         </InputContainer>

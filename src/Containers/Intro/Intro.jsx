@@ -33,7 +33,6 @@ const Intro = () => {
         "Had a great experience with ASK Prestige"
       </p> */}
 
-      <Business />
     </Container>
   );
 };

@@ -23,11 +23,13 @@ import {
 const NavToolBar = () => (
   <Container>
     <Navbar bg="light" expand="lg">
-      <Nav.Link href="/home">
-        <Img
+      <div onClick={()=> scroll.scrollToTop()}>
+      {/* <Nav.Link href="/home"> */}
+        <Img 
           src={require(`../../assets/logo.jpeg`)}
         />
-      </Nav.Link>
+      {/* </Nav.Link> */}
+      </div>
       <NavLinks>
         <Navbar.Brand href="#home">
           ASK Prestige

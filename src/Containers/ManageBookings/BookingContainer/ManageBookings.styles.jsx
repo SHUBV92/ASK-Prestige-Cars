@@ -2,20 +2,26 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding-top: 50px;
-  background-color: #D4AF37;
+  background-color: #d4af37;
   width: 100%;
   padding-left: 5%;
-  padding-right: 5%;
+  padding-right: 10%;
 
   h1 {
     font-family: GothamLight;
     font-size: 30px;
   }
+
+  @media only screen and (min-width: 600px) {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 `;
 
 export const Info = styled.div`
   display: inline-block;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  /* box-shadow: 5px 5px 0px black; */
   width: 100%;
   height: 300px;
   margin: 10px;
@@ -34,7 +40,11 @@ export const InputContainer = styled.div`
     opacity: 0.1;
   }
 
-  .dropdownButton {
+  @media only screen and (min-width: 600px) {
+    width: 100%;
+    height: 60%;
+    /* padding-left: 20%; */
+    /* padding-right: 20%; */
   }
 `;
 export const Input = styled.div`
@@ -55,11 +65,11 @@ export const Details = styled.div`
 export const SearchButton = styled.div`
   padding-top: 5px;
   align-items: center;
-  color:red;
+  color: red;
 `;
 
-export const Price = styled.div` 
+export const Price = styled.div`
   padding-top: 25px;
   padding-left: 180px;
   font-size: 20px;
-`
+`;

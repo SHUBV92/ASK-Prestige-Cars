@@ -16,6 +16,8 @@ import Footer from "./Containers/Footer/Footer";
 
 // Styling
 import "./App.css";
+import Business from "./Containers/Business/Business";
+import DistanceCalculator from "./Containers/Distance/Distance";
 
 class App extends Component {
   constructor() {
@@ -30,6 +32,10 @@ class App extends Component {
           <Element id="Intro" name="Intro">
             <Intro />
           </Element>
+          <Business />
+{/*  */}
+          {/* <DistanceCalculator /> */}
+{/*  */}
           <ChooseCar />
           <Switch>
             <Route path="/bookings"></Route>
