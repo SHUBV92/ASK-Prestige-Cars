@@ -18,6 +18,7 @@ import Footer from "./Containers/Footer/Footer";
 import "./App.css";
 import Business from "./Containers/Business/Business";
 import DistanceCalculator from "./Containers/Distance/Distance";
+import Maps from "./Containers/Maps/Maps";
 
 class App extends Component {
   constructor() {
@@ -48,6 +49,7 @@ class App extends Component {
           </Switch>
 
           <Footer />
+          <Maps />
         </Router>
       </div>
     );

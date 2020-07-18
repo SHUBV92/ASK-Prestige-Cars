@@ -9,10 +9,11 @@ export const Container = styled.div`
     padding: 10px;
   }
   .carinfo {
+    padding-top: 30px;
     padding: 30px;
   }
 
-  span{
+  span {
     padding-top: 180px;
     /* padding:30px; */
     border-style: none;

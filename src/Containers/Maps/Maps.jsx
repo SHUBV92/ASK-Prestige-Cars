@@ -1,5 +1,5 @@
+// Packages
 import React, { Component } from "react";
-
 import {
   Map,
   GoogleApiWrapper,
@@ -7,6 +7,7 @@ import {
   InfoWindow,
 } from "google-maps-react";
 
+// Styling for the map in an object 
 const mapStyles = {
   boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
   paddingTop: "50px",
@@ -46,11 +47,53 @@ export class MapContainer extends Component {
     }
   };
 
+  // const getSelectedAddres = () => {
+  //   return(dispatch, store)=>{
+  //     RNGooglePlaces.lookPlaceByID(payload)
+  //     .then(results)=>{
+  //       dispatch({
+  //         type: GET_SELECTED_ADDRESS,
+  //         payload
+  //       })
+  //     }
+  //   }
+  // }
+
   // handleChange = (event) => {
   //   this.setState({lat:})
   // }
 
   render() {
+    // Destrcuture the props
+    const {
+      posts,
+      latitude,
+      longitude,
+      google,
+      // origins,
+      // destinations,
+      // travelMode,
+      // distances
+    } = this.props;
+
+    // google.maps.DistanceMatrixService(
+    //   origins,
+    //   destinations,
+    //   travelmode,
+    //   (res, status) => {
+    //     console.log(distances);
+    //     if (status === "OK") {
+    //       console.log("The Status is Okay");
+    //     } else {
+    //       console.error(error, "status:", status);
+    //     }
+    //   }
+    // );
+
+    // console.log("Props",this.props.maps.getDistanceMatrix(origins, destinations, travelmode))
+  
+
+    // Render the Maps Component
     return (
       <div>
         <input

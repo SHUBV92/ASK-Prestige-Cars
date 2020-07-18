@@ -157,11 +157,76 @@ const ManageBookings = () => {
                 </Dropdown.Item>
               </DropdownButton>
             </InputGroup>
+
+            {/* Pickup Address */}
+            <InputGroup>
+              <FormControl
+                placeholder="Pickup Address"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+
+              <DropdownButton
+                as={InputGroup.Append}
+                variant="outline-secondary"
+                title=""
+                id="input-group-dropdown-2"
+                className="dropdownButton"
+              >
+                <Dropdown.Item href="#">
+                  Action
+                </Dropdown.Item>
+                <Dropdown.Item href="#">
+                  Another action
+                </Dropdown.Item>
+                <Dropdown.Item href="#">
+                  Something else here
+                </Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#">
+                  Separated link
+                </Dropdown.Item>
+              </DropdownButton>
+            </InputGroup>
+
+            {/* Choose Your Car  */}
+            <InputGroup>
+              <FormControl
+                placeholder="Choose Your car"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+
+              <DropdownButton
+                as={InputGroup.Append}
+                variant="outline-secondary"
+                title=""
+                id="input-group-dropdown-2"
+                className="dropdownButton"
+              >
+                <Dropdown.Item href="#">
+                  Action
+                </Dropdown.Item>
+                <Dropdown.Item href="#">
+                  Another action
+                </Dropdown.Item>
+                <Dropdown.Item href="#">
+                  Something else here
+                </Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item href="#">
+                  Separated link
+                </Dropdown.Item>
+              </DropdownButton>
+            </InputGroup>
+{/* Dynamically changing price  */}
             <Price>£70.00</Price>
 
             <br />
             <SearchButton>
-              <Button variant="danger">Search</Button>
+              <Button variant="danger">
+                Search
+              </Button>
             </SearchButton>
           </Input>
         </InputContainer>
