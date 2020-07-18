@@ -47,8 +47,30 @@ export const InputContainer = styled.div`
     /* padding-right: 20%; */
   }
 `;
+
 export const Input = styled.div`
   opacity: 1;
+  
+  .AdditionalInfo {
+    display: none;
+    padding-top: 10px;
+    background-color: forestgreen;
+  }
+
+  .options{
+    width: 100px;
+    color: purple;
+    background-color: yellow;
+
+  }
+
+  .options:focus + .AdditionalInfo{
+    display: block;
+  }
+
+  /* .AdditionalInfo - .options:active{
+          display: block
+  } */
 `;
 
 export const Details = styled.div`

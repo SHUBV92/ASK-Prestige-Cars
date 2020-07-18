@@ -67,6 +67,7 @@ const ManageBookings = () => {
 
         <InputContainer>
           <Input>
+            {/* Pickup Address */}
             <InputGroup>
               <FormControl
                 placeholder="Pickup Address"
@@ -97,6 +98,8 @@ const ManageBookings = () => {
               </DropdownButton>
             </InputGroup>
             <br />
+
+            {/* Destionation Address */}
             <InputGroup>
               <FormControl
                 placeholder="Destination Address"
@@ -128,6 +131,7 @@ const ManageBookings = () => {
 
             <br />
 
+            {/* Dat3 & Time */}
             <InputGroup>
               <FormControl
                 placeholder="Date & Time"
@@ -157,69 +161,78 @@ const ManageBookings = () => {
                 </Dropdown.Item>
               </DropdownButton>
             </InputGroup>
+            <br />
+            <div className="options">
+              More Options
+            </div>
 
-            {/* Pickup Address */}
-            <InputGroup>
-              <FormControl
-                placeholder="Pickup Address"
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
-              />
 
-              <DropdownButton
-                as={InputGroup.Append}
-                variant="outline-secondary"
-                title=""
-                id="input-group-dropdown-2"
-                className="dropdownButton"
-              >
-                <Dropdown.Item href="#">
-                  Action
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  Another action
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  Something else here
-                </Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item href="#">
-                  Separated link
-                </Dropdown.Item>
-              </DropdownButton>
-            </InputGroup>
+            <div className="AdditionalInfo">
+              {/* Passengers */}
+              <InputGroup>
+                <FormControl
+                  placeholder="Passengers"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
 
-            {/* Choose Your Car  */}
-            <InputGroup>
-              <FormControl
-                placeholder="Choose Your car"
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
-              />
+                <DropdownButton
+                  as={InputGroup.Append}
+                  variant="outline-secondary"
+                  title=""
+                  id="input-group-dropdown-2"
+                  className="dropdownButton"
+                >
+                  <Dropdown.Item href="#">
+                    Action
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#">
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#">
+                    Something else here
+                  </Dropdown.Item>
+                  <Dropdown.Divider />
+                  <Dropdown.Item href="#">
+                    Separated link
+                  </Dropdown.Item>
+                </DropdownButton>
+              </InputGroup>
+              <br />
+              {/* Choose Your Car  */}
+              <InputGroup>
+                <FormControl
+                  placeholder="Choose Your car"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
 
-              <DropdownButton
-                as={InputGroup.Append}
-                variant="outline-secondary"
-                title=""
-                id="input-group-dropdown-2"
-                className="dropdownButton"
-              >
-                <Dropdown.Item href="#">
-                  Action
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  Another action
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  Something else here
-                </Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item href="#">
-                  Separated link
-                </Dropdown.Item>
-              </DropdownButton>
-            </InputGroup>
-{/* Dynamically changing price  */}
+                <DropdownButton
+                  as={InputGroup.Append}
+                  variant="outline-secondary"
+                  title=""
+                  id="input-group-dropdown-2"
+                  className="dropdownButton"
+                >
+                  <Dropdown.Item href="#">
+                    Action
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#">
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#">
+                    Something else here
+                  </Dropdown.Item>
+                  <Dropdown.Divider />
+                  <Dropdown.Item href="#">
+                    Separated link
+                  </Dropdown.Item>
+                </DropdownButton>
+              </InputGroup>
+            </div>
+
+            
+            {/* Dynamically changing price  */}
             <Price>£70.00</Price>
 
             <br />
