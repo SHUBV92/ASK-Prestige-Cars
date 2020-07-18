@@ -1,6 +1,8 @@
 import React from "react";
 import Business from "../Business/Business";
 import { Container } from "./Intro.styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Intro = () => {
   return (
@@ -24,15 +26,23 @@ const Intro = () => {
         ornare aenean euismod elementum nisi quis
         eleifend.
       </p>
+      <link href="info@askprestigecars.co.uk">
+      <FontAwesomeIcon
+        className="icon"
+        icon={faEnvelope}
+      />
+      </link>
+      <br />
       <h3>Get In Touch with us</h3>
       <h4> +07907039195 </h4>
+      <h5>info@askprestigecars.co.uk</h5>
       <hr />
+      
       {/* <img src={require(`../../assets/logo.jpeg`)} /> */}
       {/* <h2>Testimonials</h2>
       <p>
         "Had a great experience with ASK Prestige"
       </p> */}
-
     </Container>
   );
 };

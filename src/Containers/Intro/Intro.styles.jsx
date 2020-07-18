@@ -1,14 +1,18 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Container = styled.div`
-    
-    background-color: #f6f6f6;;
+  background-color: #f6f6f6;
 
-    p{
-        padding: 20px;
-    }
+  p {
+    padding: 20px;
+  }
 
-    h3{
-        font-family:Gothamlight;
-    }
-`
+  h3 {
+    font-family: Gothamlight;
+  }
+
+  .icon{
+      font-size:50px;
+      padding:10px;
+  }
+`;

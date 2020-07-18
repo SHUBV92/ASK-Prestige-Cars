@@ -7,6 +7,9 @@ export const Container = styled.div`
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   background-color: black;
 
+h3{
+  font-size:10px;
+}
 `
 
 

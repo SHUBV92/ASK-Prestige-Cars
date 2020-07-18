@@ -32,7 +32,8 @@ const NavToolBar = () => (
       </div>
       <NavLinks>
         <Navbar.Brand href="#home">
-          ASK Prestige
+          ASK Prestige Cars
+          <h3>Our Sevice Your Experience</h3>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
