@@ -13,8 +13,8 @@ const mapStyles = {
   paddingTop: "50px",
   paddingLeft: "50px",
   paddingRight: "20px",
-  width: "60%",
-  height: "60%",
+  width: "100%",
+  height: "100%",
   // borderRadius: "20px",
 };
 
@@ -96,17 +96,17 @@ export class MapContainer extends Component {
     // Render the Maps Component
     return (
       <div>
-        <input
+        {/* <input
           type="text"
           placeholder="Destination"
-        />
+        /> */}
         <Map
           google={this.props.google}
           zoom={14}
           style={mapStyles}
           initialCenter={{
-            lat: 51.5366,
-            lng: -0.0758,
+            lat: 51.5324,
+            lng: -0.1843,
           }}
         >
           <Marker

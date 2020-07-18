@@ -132,7 +132,7 @@ const ManageBookings = () => {
             <br />
 
             {/* Dat3 & Time */}
-            <InputGroup>
+ <InputGroup>
               <FormControl
                 placeholder="Date & Time"
                 type="date"
@@ -162,14 +162,14 @@ const ManageBookings = () => {
               </DropdownButton>
             </InputGroup>
             <br />
-            <div className="options">
+            {/* <div className="options">
               More Options
-            </div>
+            </div>  */}
 
 
-            <div className="AdditionalInfo">
+            {/* <div className="AdditionalInfo">
               {/* Passengers */}
-              <InputGroup>
+              {/* <InputGroup>
                 <FormControl
                   placeholder="Passengers"
                   aria-label="Recipient's username"
@@ -198,16 +198,16 @@ const ManageBookings = () => {
                   </Dropdown.Item>
                 </DropdownButton>
               </InputGroup>
-              <br />
+              <br /> */}
               {/* Choose Your Car  */}
-              <InputGroup>
+              {/* <InputGroup>
                 <FormControl
                   placeholder="Choose Your car"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
-                />
+                /> */}
 
-                <DropdownButton
+                {/* <DropdownButton
                   as={InputGroup.Append}
                   variant="outline-secondary"
                   title=""
@@ -229,7 +229,7 @@ const ManageBookings = () => {
                   </Dropdown.Item>
                 </DropdownButton>
               </InputGroup>
-            </div>
+            </div> */} 
 
             
             {/* Dynamically changing price  */}

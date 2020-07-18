@@ -60,6 +60,7 @@ export const Input = styled.div`
   .options{
     width: 100px;
     color: purple;
+    padding-bottom:10px;
     background-color: yellow;
 
   }
@@ -85,13 +86,13 @@ export const Details = styled.div`
 `;
 
 export const SearchButton = styled.div`
-  padding-top: 5px;
+  padding-top: 2px;
   align-items: center;
   color: red;
 `;
 
 export const Price = styled.div`
-  padding-top: 25px;
+  padding-top: 2px;
   padding-left: 180px;
   font-size: 20px;
 `;
