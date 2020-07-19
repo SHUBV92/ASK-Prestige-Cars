@@ -26,12 +26,12 @@ const Intro = () => {
         ornare aenean euismod elementum nisi quis
         eleifend.
       </p>
-      <link href="info@askprestigecars.co.uk">
+      {/* <link href="info@askprestigecars.co.uk"> */}
       <FontAwesomeIcon
         className="icon"
         icon={faEnvelope}
       />
-      </link>
+      {/* </link> */}
       <br />
       <h3>Get In Touch with us</h3>
       <h4> +07907039195 </h4>
@@ -43,7 +43,7 @@ const Intro = () => {
       <p>
         "Had a great experience with ASK Prestige"
       </p> */}
-      
+
     </Container>
   );
 };
