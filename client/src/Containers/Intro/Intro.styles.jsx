@@ -10,7 +10,7 @@ export const Container = styled.div`
 
   p {
     padding: 20px;
-    text-shadow: 2px 2px gold;
+    /* text-shadow: 2px 2px gold; */
     
   }
 
