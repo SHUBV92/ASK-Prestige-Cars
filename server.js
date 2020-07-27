@@ -1,3 +1,12 @@
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
+const creds = require("./config");
+const nodemailer = require("nodemailer");
+const app = express();
+const server = require("http").createServer(app);
+
+
 const router = require('express').Router()
 const distance = require('google-distance-matrix')
 module.exports = router

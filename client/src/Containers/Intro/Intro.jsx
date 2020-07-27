@@ -2,7 +2,12 @@ import React from "react";
 import Business from "../Business/Business";
 import { Container } from "./Intro.styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faChevronCircleDown, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  Link,
+  animateScroll as scroll,
+} from "react-scroll";
+
 
 const Intro = () => {
   return (
@@ -43,6 +48,20 @@ const Intro = () => {
       <p>
         "Had a great experience with ASK Prestige"
       </p> */}
+      <h4></h4>
+      <Link
+              to="services"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="services"
+              activClass="some-active-class"
+            >
+      <FontAwesomeIcon
+        className="icon"
+        icon={faAngleDown}
+      />
+      </Link>
 
     </Container>
   );

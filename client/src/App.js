@@ -38,21 +38,9 @@ const App = () => {
           <Intro />
         </Element>
         <Business />
-        <Coverage />
-        {/*  */}
-        {/* <DistanceCalculator /> */}
-        {/*  */}
         <ChooseCar />
-        <Switch>
-          <Route path="/bookings"></Route>
-
-          <Route path="/home"></Route>
-
-          <Route path="/bookings">
-            <ManageBookings />
-          </Route>
-        </Switch>
-
+        <Coverage />
+       
         <Footer />
         <Maps booking={booking} />
       </Router>
@@ -61,3 +49,16 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+// <Switch>
+// <Route path="/bookings"></Route>
+
+// <Route path="/home"></Route>
+
+// <Route path="/bookings">
+//   <ManageBookings />
+// </Route>
+// </Switch>

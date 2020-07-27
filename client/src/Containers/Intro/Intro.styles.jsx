@@ -24,6 +24,7 @@ export const Container = styled.div`
 
   .icon {
     font-size: 50px;
-    padding: 10px;
+    /* padding: 10px; */
+    padding-top: 20px;
   }
 `;
