@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding-top: 50px;
-  background-color: #d4af37;
+  /* background-color: #d4af37; */
+  background: linear-gradient(110deg, #d4af37 60%, #fdcd3b 60%);
   width: 100%;
   padding-left: 5%;
   padding-right: 10%;
@@ -54,15 +55,12 @@ export const Input = styled.div`
   .AdditionalInfo {
     display: none;
     padding-top: 10px;
-    background-color: forestgreen;
   }
 
   .options{
     width: 100px;
-    color: purple;
+    color: red;
     padding-bottom:10px;
-    background-color: yellow;
-
   }
 
   .options:focus + .AdditionalInfo{

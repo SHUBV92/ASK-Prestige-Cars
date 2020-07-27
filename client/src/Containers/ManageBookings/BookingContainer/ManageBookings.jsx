@@ -19,6 +19,7 @@ import {
   DropdownButton,
   Dropdown,
 } from "react-bootstrap";
+import Search from "../Search/search.jsx";
 
 const ManageBookings = (props) => {
   // Personal Details
@@ -26,7 +27,9 @@ const ManageBookings = (props) => {
   const [lastName, setLastName] = useState(" ");
   // Travel Details
   const [pickUp, setPickUp] = useState(" ");
-  const [destination, setDestination] = useState(" ");
+  const [destination, setDestination] = useState(
+    " "
+  );
   // Date
   const [date, setDate] = useState(" ");
   const [bookings, setBookings] = useState([]);
@@ -37,6 +40,9 @@ const ManageBookings = (props) => {
     setName(event.target.value);
   };
 
+  // Handle form data functions
+
+  // Last name
   const handleLastChange = (event) => {
     console.log(
       "Last Name: ",
@@ -45,17 +51,21 @@ const ManageBookings = (props) => {
     setLastName(event.target.value);
   };
 
+  // Date
   const handleDateChange = (event) => {
     console.log("Date: ", event.target.value);
     setDate(event.target.value);
   };
 
   // Travel Detail
+
+  // Pick Up
   const handlePickUpChange = (event) => {
     console.log("Pickup: ", event.target.value);
     setPickUp(event.target.value);
   };
 
+  // Destination
   const handleDestinationChange = (event) => {
     console.log(
       "Destination: ",
@@ -75,13 +85,13 @@ const ManageBookings = (props) => {
       bookings.concat({
         name: name,
         lastName: lastName,
-        pickUp:pickUp,
+        pickUp: pickUp,
         destination: destination,
         date: date,
       })
     );
     console.log("B", bookings);
-    props.callback(bookings)
+    props.callback(bookings);
   };
 
   return (
@@ -191,85 +201,24 @@ const ManageBookings = (props) => {
             <br />
             {/* <div className="options">
               More Options
-            </div>  */}
-
-            {/* <div className="AdditionalInfo">
-              {/* Passengers */}
-            {/* <InputGroup>
-                <FormControl
-                  placeholder="Passengers"
-                  aria-label="Recipient's username"
-                  aria-describedby="basic-addon2"
-                />
-
-                <DropdownButton
-                  as={InputGroup.Append}
-                  variant="outline-secondary"
-                  title=""
-                  id="input-group-dropdown-2"
-                  className="dropdownButton"
-                >
-                  <Dropdown.Item href="#">
-                    Action
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#">
-                    Something else here
-                  </Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item href="#">
-                    Separated link
-                  </Dropdown.Item>
-                </DropdownButton>
-              </InputGroup>
-              <br /> */}
-            {/* Choose Your Car  */}
-            {/* <InputGroup>
-                <FormControl
-                  placeholder="Choose Your car"
-                  aria-label="Recipient's username"
-                  aria-describedby="basic-addon2"
-                /> */}
-
-            {/* <DropdownButton
-                  as={InputGroup.Append}
-                  variant="outline-secondary"
-                  title=""
-                  id="input-group-dropdown-2"
-                  className="dropdownButton"
-                >
-                  <Dropdown.Item href="#">
-                    Action
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#">
-                    Something else here
-                  </Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item href="#">
-                    Separated link
-                  </Dropdown.Item>
-                </DropdownButton>
-              </InputGroup>
-            </div> */}
+            </div>   */}
 
             {/* Dynamically changing price  */}
             <Price>£70.00</Price>
 
             <br />
             <SearchButton>
-              <Button variant="danger"
-              onClick={addBookings}
+              <Button
+                variant="danger"
+                onClick={addBookings}
               >
                 Search
               </Button>
             </SearchButton>
           </Input>
         </InputContainer>
+
+        <Search />
 
         {/* <form onSubmit={handleSubmit}>
           <label>Name</label>

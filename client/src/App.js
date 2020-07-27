@@ -19,24 +19,26 @@ import "./App.css";
 import Business from "./Containers/Business/Business";
 import DistanceCalculator from "./Containers/Distance/Distance";
 import Maps from "./Containers/Maps/Maps";
+import Coverage from "./Containers/Coverage/Coverage";
 
 const App = () => {
   const [booking, setBookings] = useState("");
 
   const callback = (bookings) => {
     setBookings(bookings);
-    console.log("App Booking", bookings)
+    console.log("App Booking", bookings);
   };
 
   return (
     <div className="App">
       <Router>
         <NavToolBar />
-        <ManageBookings callback={callback}/>
+        <ManageBookings callback={callback} />
         <Element id="Intro" name="Intro">
           <Intro />
         </Element>
         <Business />
+        <Coverage />
         {/*  */}
         {/* <DistanceCalculator /> */}
         {/*  */}
@@ -52,7 +54,7 @@ const App = () => {
         </Switch>
 
         <Footer />
-        <Maps booking={booking}/>
+        <Maps booking={booking} />
       </Router>
     </div>
   );
