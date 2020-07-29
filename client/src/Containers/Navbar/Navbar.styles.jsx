@@ -6,10 +6,14 @@ export const Container = styled.div`
   background-color: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
   /* height: 250px; */
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  /* background-color: black; */
+  background: black;
 
 h3{
   font-size:10px;
+}
+
+ linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);.navbar {
+  background: black;
 }
 `
 

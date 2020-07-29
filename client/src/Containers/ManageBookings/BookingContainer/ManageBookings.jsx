@@ -20,6 +20,7 @@ import {
   Dropdown,
 } from "react-bootstrap";
 import Search from "../Search/search.jsx";
+import Mailer from "../../Mailer/Mailer.jsx";
 
 const ManageBookings = (props) => {
   // Personal Details
@@ -255,6 +256,7 @@ const ManageBookings = (props) => {
         </form> */}
       </Info>
       <hr />
+      <Mailer />
 
       <hr />
       {/* <h2>Bookings</h2>

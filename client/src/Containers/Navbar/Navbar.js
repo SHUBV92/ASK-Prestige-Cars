@@ -22,7 +22,7 @@ import {
 
 const NavToolBar = () => (
   <Container>
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" className="navbar">
       <div onClick={()=> scroll.scrollToTop()}>
       {/* <Nav.Link href="/home"> */}
         <Img 
