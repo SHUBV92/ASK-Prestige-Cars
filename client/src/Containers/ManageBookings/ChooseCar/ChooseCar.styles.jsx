@@ -9,8 +9,13 @@ export const Container = styled.div`
     padding: 10px;
   }
   .carinfo {
-    padding-top: 30px;
-    padding: 30px;
+    /* margin-top: 800px; */
+    padding-top: 300px;
+  }
+
+  .carousel-caption{
+    padding-top:100px;
+    color: black;
   }
 
   span {
@@ -18,7 +23,7 @@ export const Container = styled.div`
     /* padding:30px; */
     border-style: none;
     color: purple;
-    background-color: white;
+    /* background-color: white; */
   }
 
   p {

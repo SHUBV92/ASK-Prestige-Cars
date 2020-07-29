@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-import MyEmail from '../Test/Email'
-import { MyEmail, renderEmail } from 'react-html-email'
+import MyEmail from './MyEmail.jsx'
+import { renderEmail } from 'react-html-email'
 
 class Mailer extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       name: null,
@@ -31,48 +31,45 @@ class Mailer extends Component {
     console.log(event.target);
   };
 
-  handleSubmit (event)  {
-    const messageHtml = renderEmail(
-      <MyEmail name={this.state.name}>
-        {this.state.message}
-      </MyEmail>
-    );
+//   handleSubmit (event)  {
+//     const messageHtml = renderEmail(
+//       <MyEmail name={this.state.name}>
+//         {this.state.message}
+//       </MyEmail>
+//     );
 
-    axios({
-      method: "POST",
-      url: "http://localhost:8000/send",
-      data: {
-        name: this.state.name,
-        email: this.state.email,
-        messageHtml: messageHtml
-      }
-    }).then(response => {
-      if (response.data.msg === "success") {
-        alert("Email sent!");
-        this.resetForm();
-      } else if (response.data.msg === "fail") {
-        alert(
-          "Oops, something went wrong. Try again"
-        );
-      }
-    });
-  };
+//     axios({
+//       method: "POST",
+//       url: "http://localhost:5000/send",
+//       data: {
+//         name: this.state.name,
+//         email: this.state.email,
+//         messageHtml: messageHtml
+//       }
+//     }).then(response => {
+//       if (response.data.msg === "success") {
+//         alert("Email sent!");
+//         this.resetForm();
+//       } else if (response.data.msg === "fail") {
+//         alert(
+//           "Oops, something went wrong. Try again"
+//         );
+//       }
+//     });
+//   };
 
-  componentDidUpdate(){
-    console.log(this.state)
-  }
-
+ 
   render() {
     return (
       <div className="Container">
         <div className="head">
           <h1>
-            <span>Contact </span> For Candles
+            <span>Make a Booking </span> 
           </h1>
         </div>
         <form Method="post" action="/send">
          
-           
+           <input value={this.props.bookings.pickUp} />
           <p>
             <button
               type="submit"

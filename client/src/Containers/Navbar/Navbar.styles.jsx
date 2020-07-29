@@ -34,3 +34,9 @@ padding-left:10px;
     }
 }
 `
+
+
+
+
+// Navbar Style
+// background: linear-gradient(143deg, black 28%,#fdcd3b 70% ,#FFF 70%);

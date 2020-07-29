@@ -97,8 +97,8 @@ const ManageBookings = (props) => {
 
   return (
     <Container>
-      <Info>
         <h1>Make a Booking</h1>
+      <Info>
 
         <InputContainer>
           <Input>
@@ -205,21 +205,22 @@ const ManageBookings = (props) => {
             </div>   */}
 
             {/* Dynamically changing price  */}
-            <Price>£70.00</Price>
-
-            <br />
-            <SearchButton>
-              <Button
-                variant="danger"
-                onClick={addBookings}
-              >
-                Search
-              </Button>
-            </SearchButton>
+        
           </Input>
         </InputContainer>
-
         <Search />
+
+        <Price>£70.00</Price>
+
+<br />
+<SearchButton>
+  <Button
+    variant="danger"
+    onClick={addBookings}
+  >
+    Search
+  </Button>
+</SearchButton>
 
         {/* <form onSubmit={handleSubmit}>
           <label>Name</label>
@@ -256,7 +257,7 @@ const ManageBookings = (props) => {
         </form> */}
       </Info>
       <hr />
-      <Mailer />
+      <Mailer bookings ={bookings}/>
 
       <hr />
       {/* <h2>Bookings</h2>

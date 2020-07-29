@@ -38,7 +38,7 @@ const Search = () => {
   const onClicks = () => setShowResults(true);
   return (
     <Container>
-      <button onClick={onClicks}>Search</button>
+      <h4 onClick={onClicks}>More options</h4>
       {showResults ? (
         <div className="AdditionalInfo">
           <h1>Results</h1>

@@ -18,7 +18,10 @@
   "homepage": "https://github.com/SHUBV92/ASK-Prestige-Cars#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "express": "^4.17.1",
     "geocode": "0.0.3",
+    "nodemailer": "^6.4.10",
+    "nodemon": "^2.0.4",
     "react-geocode": "^0.2.1"
   }
 }
