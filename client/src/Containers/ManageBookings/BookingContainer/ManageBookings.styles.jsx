@@ -20,7 +20,7 @@ export const Container = styled.div`
     #fdcd3b 60%
   );
   /* background-color: #d4af37; */
-  border-radius: 10px;
+  /* border-radius: 10px; */
 
   h1 {
     font-family: GothamLight;
