@@ -91,16 +91,16 @@ const Search = () => {
               className="dropdownButton"
             >
               <Dropdown.Item href="#">
-                Saloon 
+                Saloon: vauxhall Insigjnia or similar
               </Dropdown.Item>
               <Dropdown.Item href="#">
-                Executive
+                Estate: Volkswagen Passat Estate or similar
               </Dropdown.Item>
               <Dropdown.Item href="#">
-                Estate
+              MPV: Ford Galaxy or similar
               </Dropdown.Item>
               <Dropdown.Item href="#">
-                MPV
+              Executive: BMW 5 Series or similar
               </Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item href="#">

@@ -69,6 +69,7 @@ export const Container = styled.div`
       rgba(254, 163, 170, 0.8) 80%,
       rgba(254, 163, 170, 0.9) 80%
     );
+  transform: matrix(1.04, 0, 0, 1.04, 0, 0);
   background-color: rgb(254, 163, 170);
   background-size: 100% 100%;
   min-height: 100%;

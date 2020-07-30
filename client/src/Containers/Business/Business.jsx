@@ -30,7 +30,7 @@ const Business = () => {
           />
           <Carousel.Caption>
             <TextBox>
-              <h3>MINICABS</h3>
+              <h3>Executives</h3>
               <p>
                 Nulla vitae elit libero, a
                 pharetra augue mollis interdum.
@@ -47,7 +47,7 @@ const Business = () => {
 
           <Carousel.Caption>
             <TextBox>
-              <h3>CHAUFFERING</h3>
+              <h3>Events</h3>
               <p>
                 Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit.

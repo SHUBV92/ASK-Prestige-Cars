@@ -7,11 +7,10 @@ export const Container = styled.div`
     #f6f6f6 60%,
     #ffff 60%
   );
-
+  border-radius: 10px;
   p {
     padding: 20px;
     /* text-shadow: 2px 2px gold; */
-    
   }
 
   @media only screen and (min-width: 600px) {
