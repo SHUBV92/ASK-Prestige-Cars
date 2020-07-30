@@ -15,7 +15,7 @@ import ChooseCar from "./Containers/ManageBookings/ChooseCar/ChooseCar";
 import Footer from "./Containers/Footer/Footer";
 
 // Styling
-import {Container} from "./App.styles.jsx";
+import { Container, AppStyle } from "./App.styles.jsx";
 import Business from "./Containers/Business/Business";
 import DistanceCalculator from "./Containers/Distance/Distance";
 import Maps from "./Containers/Maps/Maps";
@@ -30,33 +30,30 @@ const App = () => {
   };
 
   return (
-<Container>
-    <div className="App">
-      <div className="appStyle">
-ASK Prestige
-      </div>
-      <Router>
-        <NavToolBar />
-        <ManageBookings callback={callback} />
-        <Element id="Intro" name="Intro">
-          <Intro />
-        </Element>
-        <Business />
-        <ChooseCar />
-        <Coverage />
-       
-        <Footer />
-        <Maps booking={booking} />
-      </Router>
+    <div>
+      <AppStyle></AppStyle>
+      <Container>
+        <div className="App">
+          <Router>
+            <NavToolBar />
+            <ManageBookings callback={callback} />
+            <Element id="Intro" name="Intro">
+              <Intro />
+            </Element>
+            <Business />
+            <ChooseCar />
+            <Coverage />
+
+            <Footer />
+            <Maps booking={booking} />
+          </Router>
+        </div>
+      </Container>
     </div>
-    </Container>
   );
 };
 
 export default App;
-
-
-
 
 // <Switch>
 // <Route path="/bookings"></Route>

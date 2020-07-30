@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  /* background-color: #f6f6f6; */
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+
   .header {
     padding: 100px;
   }
@@ -13,8 +15,8 @@ export const Container = styled.div`
     padding-top: 300px;
   }
 
-  .carousel-caption{
-    padding-top:100px;
+  .carousel-caption {
+    padding-top: 100px;
     color: black;
   }
 
@@ -31,14 +33,14 @@ export const Container = styled.div`
     padding: 20px;
   }
 
-/* Mobile  */
+  /* Mobile  */
   @media only screen and (min-width: 600px) {
     padding-right: 150px;
     padding-left: 150px;
   }
 
   @media only screen and (min-width: 1200px) {
-    padding-right: 500px;
-    padding-left: 500px;
+    padding-right: 200px;
+    padding-left: 200px;
   }
 `;
