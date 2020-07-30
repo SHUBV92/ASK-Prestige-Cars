@@ -4,9 +4,18 @@ import {
   TextBox,
 } from "./Business.styles.jsx";
 import { Carousel } from "react-bootstrap";
+import {
+  useSpring,
+  animated,
+} from "react-spring";
 
 const Business = () => {
+  const props = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+  });
   return (
+    <animated.div style={props}>
     <Container id="services">
       <h3>Our Services</h3>
       <p>Executive minicab service</p>
@@ -74,6 +83,8 @@ const Business = () => {
         </Carousel.Item>
       </Carousel>
     </Container>
+    </animated.div>
+
   );
 };
 

@@ -11,9 +11,19 @@ import {
   Link,
   animateScroll as scroll,
 } from "react-scroll";
+import {
+  useSpring,
+  animated,
+} from "react-spring";
 
 const Intro = () => {
+  const props = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+  });
+
   return (
+    <animated.div style={props}>
     <Container id="about">
       <h1>About Us</h1>
 
@@ -61,6 +71,7 @@ const Intro = () => {
         />
       </Link>
     </Container>
+    </animated.div>
   );
 };
 

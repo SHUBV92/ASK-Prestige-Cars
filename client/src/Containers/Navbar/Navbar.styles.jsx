@@ -12,8 +12,8 @@ h3{
   font-size:10px;
 }
 
- linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);.navbar {
-  background: black;
+ background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);.navbar {
+  /* background: black; */
 }
 `
 
@@ -27,6 +27,9 @@ border-radius:10px;
 export const NavLinks = styled.div`
 padding-left:10px;
 
+Nav-Links{
+  text-align:right;
+}
 .booking {
     margin-right:100px;
     h2{

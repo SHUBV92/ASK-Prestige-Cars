@@ -15,7 +15,7 @@ import ChooseCar from "./Containers/ManageBookings/ChooseCar/ChooseCar";
 import Footer from "./Containers/Footer/Footer";
 
 // Styling
-import "./App.css";
+import {Container} from "./App.styles.jsx";
 import Business from "./Containers/Business/Business";
 import DistanceCalculator from "./Containers/Distance/Distance";
 import Maps from "./Containers/Maps/Maps";
@@ -30,7 +30,11 @@ const App = () => {
   };
 
   return (
+<Container>
     <div className="App">
+      <div className="appStyle">
+ASK Prestige
+      </div>
       <Router>
         <NavToolBar />
         <ManageBookings callback={callback} />
@@ -45,6 +49,7 @@ const App = () => {
         <Maps booking={booking} />
       </Router>
     </div>
+    </Container>
   );
 };
 

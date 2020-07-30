@@ -29,8 +29,8 @@ export const Container = styled.div`
 
   /* Small devices  */
   @media only screen and (min-width: 600px) {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 `;
 
@@ -43,6 +43,10 @@ export const Info = styled.div`
   /* styling */
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+
+  @media only screen and (min-width: 600px) {
+    height: 400px;
+  }
 `;
 
 export const InputContainer = styled.div`
@@ -58,6 +62,7 @@ export const InputContainer = styled.div`
   @media only screen and (min-width: 600px) {
     width: 100%;
     height: 60%;
+    padding-top: 45px;
     /* padding-left: 20%; */
     /* padding-right: 20%; */
   }
