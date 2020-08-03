@@ -5,8 +5,10 @@ import React, {
 
 const DistanceCalculator = () => {
   const [pickUp, setPickUp] = useState();
-  const [destination, setDestination] = useState();
-
+  const [
+    destination,
+    setDestination,
+  ] = useState();
 
   const handleDateChange = (event) => {
     console.log("Date: ", event.target.value);
@@ -15,7 +17,7 @@ const DistanceCalculator = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-}
+  };
 
   const API_KEY =
     "AIzaSyAe2TKldSe-prHE4pkzmnfqbMNEAeBwCj4";
@@ -24,19 +26,19 @@ const DistanceCalculator = () => {
     "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=Washington,DC&destinations=New+York+City,NY&key=AIzaSyAe2TKldSe-prHE4pkzmnfqbMNEAeBwCj4";
 
   useEffect(() => {
-    fetch("https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=Washington,DC&destinations=New+York+City,NY&key=AIzaSyAe2TKldSe-prHE4pkzmnfqbMNEAeBwCj4")
+    fetch(
+      "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=Washington,DC&destinations=New+York+City,NY&key=AIzaSyAe2TKldSe-prHE4pkzmnfqbMNEAeBwCj4"
+    )
       .then((res) => {
-        console.log("res", res)  
-        res.json()
-    })
-       
+        console.log("res", res);
+        res.json();
+      })
+
       .then((data) => console.log("data", data));
     //   .catch((err)=> console.log(err))
-  }, );
+  });
 
-
-  
-return <div>Google Distance Calculator</div>;
+  return <div>Google Distance Calculator</div>;
 };
 
 export default DistanceCalculator;

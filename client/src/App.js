@@ -5,30 +5,34 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { Element } from "react-scroll";
 
-// Components
+// Imported Components
 import NavToolBar from "./Containers/Navbar/Navbar";
 import ManageBookings from "./Containers/ManageBookings/BookingContainer/ManageBookings";
-import Intro from "./Containers/Intro/Intro";
-import ChooseCar from "./Containers/ManageBookings/ChooseCar/ChooseCar";
+import AboutUs from "./Containers/AboutUs/AboutUs";
+import OurFleet from "./Containers/ManageBookings/OurFleet/OurFleet";
+import OurServices from "./Containers/OurServices/OurServices.jsx";
 import Footer from "./Containers/Footer/Footer";
 
 // Styling
-import { Container, AppStyle } from "./App.styles.jsx";
-import Business from "./Containers/Business/Business";
+import {
+  Container,
+  AppStyle,
+} from "./App.styles.jsx";
 import DistanceCalculator from "./Containers/Distance/Distance";
 import Maps from "./Containers/Maps/Maps";
 import Coverage from "./Containers/Coverage/Coverage";
 
+// App Component
 const App = () => {
+  // Hooks
   const [booking, setBookings] = useState("");
-
+  // Callback Function
   const callback = (bookings) => {
     setBookings(bookings);
     console.log("App Booking", bookings);
   };
-
+  // Render all Components
   return (
     <div>
       <AppStyle></AppStyle>
@@ -37,13 +41,10 @@ const App = () => {
           <Router>
             <NavToolBar />
             <ManageBookings callback={callback} />
-            <Element id="Intro" name="Intro">
-              <Intro />
-            </Element>
-            <Business />
-            <ChooseCar />
+            <AboutUs />
+            <OurServices />
+            <OurFleet />
             <Coverage />
-
             <Footer />
             <Maps booking={booking} />
           </Router>
@@ -54,13 +55,3 @@ const App = () => {
 };
 
 export default App;
-
-// <Switch>
-// <Route path="/bookings"></Route>
-
-// <Route path="/home"></Route>
-
-// <Route path="/bookings">
-//   <ManageBookings />
-// </Route>
-// </Switch>

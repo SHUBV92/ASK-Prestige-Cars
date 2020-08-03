@@ -103,6 +103,10 @@ export const SearchButton = styled.div`
   padding-top: 2px;
   align-items: center;
   color: red;
+
+  @media only screen and (min-width: 600px) {
+  padding-top:7%;
+  }
 `;
 
 export const Price = styled.div`

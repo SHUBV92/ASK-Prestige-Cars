@@ -102,4 +102,9 @@ export const TextBox = styled.div`
     padding: 50px;
     padding-right: 200px;
   }
+
+  @media only screen and (min-width: 992px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }  
 `;

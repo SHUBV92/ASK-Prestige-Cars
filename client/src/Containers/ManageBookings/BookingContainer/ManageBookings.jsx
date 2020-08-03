@@ -1,4 +1,13 @@
+// Packages
 import React, { useState } from "react";
+
+// Imported Components
+import Maps from "../../Maps/Maps";
+import JourneyDetails from "../JourneyDetails/JourneyDetails.jsx";
+import Search from "../Search/search.jsx";
+import Mailer from "../../Mailer/Mailer.jsx";
+
+// Styling
 import CardView from "../../../Components/Card/Card.jsx";
 import {
   Container,
@@ -9,9 +18,6 @@ import {
   SearchButton,
   Price,
 } from "./ManageBookings.styles";
-import Maps from "../../Maps/Maps";
-import ChooseCar from "../ChooseCar/ChooseCar.jsx";
-import JourneyDetails from "../JourneyDetails/JourneyDetails.jsx";
 import {
   InputGroup,
   FormControl,
@@ -19,10 +25,12 @@ import {
   DropdownButton,
   Dropdown,
 } from "react-bootstrap";
-import Search from "../Search/search.jsx";
-import Mailer from "../../Mailer/Mailer.jsx";
 
+// ManageBooking Component
 const ManageBookings = (props) => {
+  
+  // Hooks
+  
   // Personal Details
   const [name, setName] = useState(" ");
   const [lastName, setLastName] = useState(" ");
@@ -35,14 +43,13 @@ const ManageBookings = (props) => {
   const [date, setDate] = useState(" ");
   const [bookings, setBookings] = useState([]);
 
+  // Handle form data functions
+  
   // Personal Details
   const handleNameChange = (event) => {
     console.log("Name: ", event.target.value);
     setName(event.target.value);
   };
-
-  // Handle form data functions
-
   // Last name
   const handleLastChange = (event) => {
     console.log(
@@ -51,7 +58,6 @@ const ManageBookings = (props) => {
     );
     setLastName(event.target.value);
   };
-
   // Date
   const handleDateChange = (event) => {
     console.log("Date: ", event.target.value);
@@ -59,13 +65,11 @@ const ManageBookings = (props) => {
   };
 
   // Travel Detail
-
   // Pick Up
   const handlePickUpChange = (event) => {
     console.log("Pickup: ", event.target.value);
     setPickUp(event.target.value);
   };
-
   // Destination
   const handleDestinationChange = (event) => {
     console.log(
@@ -74,12 +78,11 @@ const ManageBookings = (props) => {
     );
     setDestination(event.target.value);
   };
-
   // Form Submission
   const handleSubmit = (event) => {
     event.preventDefault();
   };
-
+  // Add Bookings
   const addBookings = () => {
     console.log("A", bookings);
     setBookings(
@@ -94,120 +97,74 @@ const ManageBookings = (props) => {
     console.log("B", bookings);
     props.callback(bookings);
   };
+  // Collection of Input Fields
+  const inputCollection = [
+    {
+      placeholderName: "Pickup Address",
+      onChange: handlePickUpChange,
+      type: "text",
+    },
+    {
+      placeholderName: "Destination Address",
+      onChange: handleDestinationChange,
+      type: "text",
+    },
+    {
+      placeholderName: "Date & Time",
+      onChange: handleDateChange,
+      type: "date",
+    },
+  ];
 
   return (
     <Container>
       <h1>Make a Booking</h1>
       <Info>
         <InputContainer>
-          <Input>
-            {/* Pickup Address */}
-            <InputGroup>
-              <FormControl
-                placeholder="Pickup Address"
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
-                onChange={handlePickUpChange}
-              />
+          {inputCollection.map((fields) => (
+            <Input>
+              {/* Pickup Address */}
+              <InputGroup>
+                <FormControl
+                  placeholder={
+                    fields.placeholderName
+                  }
+                  type={fields.type}
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                  onChange={fields.onChange}
+                />
 
-              <DropdownButton
-                as={InputGroup.Append}
-                variant="outline-secondary"
-                title=""
-                id="input-group-dropdown-2"
-                className="dropdownButton"
-              >
-                <Dropdown.Item href="#">
-                  Action
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  Another action
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  Something else here
-                </Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item href="#">
-                  Separated link
-                </Dropdown.Item>
-              </DropdownButton>
-            </InputGroup>
-            <br />
+                <DropdownButton
+                  as={InputGroup.Append}
+                  variant="outline-secondary"
+                  title=""
+                  id="input-group-dropdown-2"
+                  className="dropdownButton"
+                >
+                  <Dropdown.Item href="#">
+                    Action
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#">
+                    Another action
+                  </Dropdown.Item>
+                  <Dropdown.Item href="#">
+                    Something else here
+                  </Dropdown.Item>
+                  <Dropdown.Divider />
+                  <Dropdown.Item href="#">
+                    Separated link
+                  </Dropdown.Item>
+                </DropdownButton>
+              </InputGroup>
+              <br />
 
-            {/* Destionation Address */}
-            <InputGroup>
-              <FormControl
-                placeholder="Destination Address"
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
-                onChange={handleDestinationChange}
-              />
-
-              <DropdownButton
-                as={InputGroup.Append}
-                variant="outline-secondary"
-                title=""
-                id="input-group-dropdown-2"
-              >
-                <Dropdown.Item href="#">
-                  Action
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  Another action
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  Something else here
-                </Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item href="#">
-                  Separated link
-                </Dropdown.Item>
-              </DropdownButton>
-            </InputGroup>
-
-            <br />
-
-            {/* Dat3 & Time */}
-            <InputGroup>
-              <FormControl
-                placeholder="Date & Time"
-                type="date"
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
-                onChange={handleDateChange}
-              />
-
-              <DropdownButton
-                as={InputGroup.Append}
-                variant="outline-secondary"
-                title=""
-                id="input-group-dropdown-2"
-              >
-                <Dropdown.Item href="#">
-                  Action
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  Another action
-                </Dropdown.Item>
-                <Dropdown.Item href="#">
-                  Something else here
-                </Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item href="#">
-                  Separated link
-                </Dropdown.Item>
-              </DropdownButton>
-            </InputGroup>
-            <br />
-            {/* <div className="options">
-              More Options
-            </div>   */}
-
-            {/* Dynamically changing price  */}
-          </Input>
+            </Input>
+          ))}
         </InputContainer>
         <Search />
 
+          {/* Dynamically calculate the price  */}
         <Price>£70.00</Price>
 
         <br />
@@ -219,46 +176,19 @@ const ManageBookings = (props) => {
             Search
           </Button>
         </SearchButton>
-
-        {/* <form onSubmit={handleSubmit}>
-          <label>Name</label>
-          <input
-            type="text"
-            value={name}
-            onChange={handleNameChange}
-            name="name"
-            placeholder="Name"
-          />
-
-          <br />
-          <label>Last Name</label>
-          <input
-            type="text"
-            value={lastName}
-            onChange={handleLastChange}
-            name="last"
-            placeholder="Last Name"
-          />
-          <br />
-          <label>Date</label>
-          <input
-            type="date"
-            value={date}
-            onChange={handleDateChange}
-            name="date"
-            placeholder="Enter your dates"
-          />
-          <br />
-          <button onClick={addBookings}>
-            submit
-          </button>
-        </form> */}
       </Info>
       <hr />
-      <Mailer bookings={bookings} />
+      {/* <Mailer bookings={bookings} /> */}
 
       <hr />
-      {/* <h2>Bookings</h2>
+    </Container>
+  );
+};
+
+export default ManageBookings;
+
+{
+  /* <h2>Bookings</h2>
       {bookings.length === 0
         ? "loading....."
         : bookings.map((booking, index) => (
@@ -266,11 +196,5 @@ const ManageBookings = (props) => {
               booking={booking}
               index={index + 1}
             />
-          ))} */}
-      {/* <JourneyDetails /> */}
-      {/* <ChooseCar /> */}
-    </Container>
-  );
-};
-
-export default ManageBookings;
+          ))} */
+}

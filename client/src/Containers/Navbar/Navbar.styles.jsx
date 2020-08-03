@@ -14,7 +14,7 @@ export const Container = styled.div`
 
   h3 {
     font-size: 10px;
-    color: white;
+    color: black;
     /* padding-left:800px; */
   }
   .navbar {
@@ -25,9 +25,6 @@ export const Container = styled.div`
       white 70%
     );
 
-    @media only screen and (min-width: 768px) {
-      /* padding-left:100px; */
-    }
     /* background: black; */
   }
 `;
@@ -40,8 +37,13 @@ export const Img = styled.img`
 
 export const NavLinks = styled.div`
   @media only screen and (min-width: 768px) {
-    padding-left: 40%;
-    color: white;
+    padding-left: 70%;
+    color: black;
+  }
+
+  @media only screen and (min-width: 600px) {
+    padding-left: 50%;
+
   }
 
   Nav-Links {
