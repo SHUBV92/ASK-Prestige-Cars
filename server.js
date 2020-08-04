@@ -1,10 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-// const creds = require("./config");
-const nodemailer = require("nodemailer");
 const app = express();
 const server = require("http").createServer(app);
+// const creds = require("./config");
+const nodemailer = require("nodemailer");
+const smtpTransport = require('nodemailer-smtp-transport')
 
 
 // const router = require('express').Router()
@@ -12,20 +13,35 @@ const server = require("http").createServer(app);
 // module.exports = router
 
 
-server.listen(process.env.PORT || 2000)
+server.listen(process.env.PORT || 8000)
 
-app.use(express.static(path.join(__dirname, "client/build")));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.get("/", function(req, res) {  
-  res.sendFile(path.join(__dirname, "client/build", "index.html"))});
+// app.use(express.static(path.join(__dirname, "client/build")));
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+// app.get("/", function(req, res) {  
+//   res.sendFile(path.join(__dirname, "client/build", "index.html"))});
 
 
   // Nodemailer
 app.get("/", (req, res) => {
     res.send("Send Your Email to /send");
   });
-  app.post("/send", (req, res) => {
+
+  const transporter = nodemailer.createTransport(smtpTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: "shubs virk",  
+      pass: "P@$$word1234"
+      // user: creds.USER,
+      // pass: creds.PASS
+    }
+  }));
+  app.get("/send", (req, res) => {
+    console.log("Send" )
+    res.send("Dont Send your Email");
+
     const output = `
       <h1>Conatct Request</h1>
       <p>
@@ -35,25 +51,16 @@ app.get("/", (req, res) => {
               <li>Phone: ${req.body.phone}</li>  
           <ul>
       <p>
+      
       `;
   
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      auth: {
-        user: "shubs virk",  πmanage
-        pass: "P@$$word1234"
-        // user: creds.USER,
-        // pass: creds.PASS
-      }
-    });
-    let mailOptions = {
-      from: '"Shubinder" <shubv1992@gmail.com>',
+   
+    const mailOptions = {
+      from: 'shubv1992@gmail.com>',
       to: "shubinder92@gmail.com",
-      subject: "Conatct Request",
+      subject: "Contact Request",
       text: "Hello",
-      html: output
+      // html: output
     };
     transporter.sendMail(
       mailOptions,

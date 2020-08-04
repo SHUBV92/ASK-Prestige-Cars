@@ -8,7 +8,7 @@ import Search from "../Search/search.jsx";
 import Mailer from "../../Mailer/Mailer.jsx";
 
 // Styling
-import CardView from "../../../Components/Card/Card.jsx";
+import CardView from "../../../components/Card/Card.jsx";
 import {
   Container,
   Details,
@@ -28,23 +28,22 @@ import {
 
 // ManageBooking Component
 const ManageBookings = (props) => {
-  
   // Hooks
-  
+
   // Personal Details
-  const [name, setName] = useState(" ");
-  const [lastName, setLastName] = useState(" ");
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
   // Travel Details
-  const [pickUp, setPickUp] = useState(" ");
+  const [pickUp, setPickUp] = useState("");
   const [destination, setDestination] = useState(
-    " "
+    ""
   );
   // Date
-  const [date, setDate] = useState(" ");
+  const [date, setDate] = useState("");
   const [bookings, setBookings] = useState([]);
 
   // Handle form data functions
-  
+
   // Personal Details
   const handleNameChange = (event) => {
     console.log("Name: ", event.target.value);
@@ -95,7 +94,7 @@ const ManageBookings = (props) => {
       })
     );
     console.log("B", bookings);
-    props.callback(bookings);
+    props.setBookings(bookings);
   };
   // Collection of Input Fields
   const inputCollection = [
@@ -158,13 +157,12 @@ const ManageBookings = (props) => {
                 </DropdownButton>
               </InputGroup>
               <br />
-
             </Input>
           ))}
         </InputContainer>
         <Search />
 
-          {/* Dynamically calculate the price  */}
+        {/* Dynamically calculate the price  */}
         <Price>£70.00</Price>
 
         <br />
@@ -178,7 +176,7 @@ const ManageBookings = (props) => {
         </SearchButton>
       </Info>
       <hr />
-      {/* <Mailer bookings={bookings} /> */}
+      <Mailer bookings={bookings} />
 
       <hr />
     </Container>

@@ -1,9 +1,12 @@
+// Packages
 import React, { Component } from "react";
 import axios from "axios";
 
+// Imported Components
 import MyEmail from "./MyEmail.jsx";
 import { renderEmail } from "react-html-email";
 
+// Mailer Class Component
 class Mailer extends Component {
   constructor(props) {
     super();
@@ -12,12 +15,12 @@ class Mailer extends Component {
       email: null,
       phone: null,
     };
-    //  this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(
       this
     );
     console.log("State: ", this.state);
   }
+
 
   // handleChange = event => {
   //   event.preventdefault.value();
@@ -37,31 +40,39 @@ class Mailer extends Component {
     );
     console.log("message", messageHtml);
 
+    // Send the booking to the backend 
     axios({
-      method: "POST",
-      url: "http://localhost:5000/send",
+      method: "GET",
+      url: "http://localhost:8000/send",
       data: {
-        name: this.props.name,
-        email: this.props.email,
+        pickUp: this.props.bookings.pickUp,
+        destination: this.props.bookings.destination,
         // messageHtml: messageHtml
       },
     }).then((response) => {
       if (response.data.msg === "success") {
         alert("Email sent!");
         // this.resetForm();
-        console.log("axios data", response.data.msg)
+        console.log(
+          "axios data",
+          response.data.msg
+        );
       } else if (response.data.msg === "fail") {
         alert(
           "Oops, something went wrong. Try again"
         );
-        console.log("axios data", response.data.msg)
-
+        console.log(
+          "axios data",
+          response.data.msg
+        );
       }
     });
-    console.log("Axios Used")
+    console.log("Axios Used");
   }
 
   render() {
+  {console.log(" Mailer", this.props.bookings)}
+
     return (
       <div className="Container">
         <div className="head">
@@ -77,7 +88,6 @@ class Mailer extends Component {
         <p>
           <button
             type="submit"
-            // onClick={this.handleChange}
             onClick={this.handleSubmit}
           >
             Submit

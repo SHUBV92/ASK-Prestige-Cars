@@ -8,6 +8,7 @@ import {
   FormControl,
   Button,
   Nav,
+  ToastBody,
 } from "react-bootstrap";
 import {
   Container,
@@ -24,22 +25,18 @@ const NavToolBar = () => {
   const navItems = [
     {
       name: "About",
-      className: "about",
       linkToScroll: "about",
     },
     {
       name: "Services",
-      className: "services",
       linkToScroll: "services",
     },
     {
       name: "Our Fleet",
-      className: "cars",
       linkToScroll: "cars",
     },
     {
       name: "Contact Us",
-      className: "contact",
       linkToScroll: "contact",
     },
   ];
@@ -51,11 +48,9 @@ const NavToolBar = () => {
         className="navbar"
       >
         <div onClick={() => scroll.scrollToTop()}>
-          {/* <Nav.Link href="/home"> */}
           <Img
             src={require(`../../assets/logo.jpeg`)}
           />
-          {/* </Nav.Link> */}
         </div>
         <NavLinks>
           <Navbar.Brand href="#home">
@@ -66,17 +61,16 @@ const NavToolBar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              {navItems.map((navItem) => (
+              {navItems.map((item) => (
                 <Link
-                  to={navItem.linkToScroll}
+                  to={item.linkToScroll}
                   spy={true}
                   smooth={true}
                   duration={500}
-                  className={navItem.className}
-                  activClass="some-active-class"
+                  activeClass="some-active-class"
                 >
                   <Nav.Link href="/home">
-                    {navItem.name}
+                    {item.name}
                   </Nav.Link>
                 </Link>
               ))}
@@ -92,3 +86,8 @@ const NavToolBar = () => {
 };
 
 export default NavToolBar;
+
+// TO-DO
+// - Remove array of navbar items along with map fn
+// - Create Link component with name/scroll props
+// - REMOVE CLASSNAMES BITCH

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+//good job
 export const Container = styled.div`
   /* background-color: white; */
 
@@ -106,5 +106,5 @@ export const TextBox = styled.div`
   @media only screen and (min-width: 992px) {
     padding-left: 100px;
     padding-right: 100px;
-  }  
+  }
 `;

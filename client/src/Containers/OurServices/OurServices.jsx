@@ -50,17 +50,17 @@ const OurServices = () => {
         <p>Executive minicab service</p>
 
         <Carousel>
-          {serviceCollection.map((x) => (
+          {serviceCollection.map((service) => (
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={require(`../../assets/${x.image}`)}
-                alt={x.alt}
+                src={require(`../../assets/${service.image}`)}
+                alt={service.alt}
               />
               <Carousel.Caption>
                 <TextBox>
-                  <h3>{x.name}</h3>
-                  <p>{x.description}</p>
+                  <h3>{service.name}</h3>
+                  <p>{service.description}</p>
                 </TextBox>
               </Carousel.Caption>
             </Carousel.Item>
@@ -72,3 +72,5 @@ const OurServices = () => {
 };
 
 export default OurServices;
+
+// FAAAAAKIN GOOD JOB HOE BAG... nearly 10/10 when array is shifted ygm madting

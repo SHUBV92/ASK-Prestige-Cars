@@ -7,48 +7,44 @@ import {
 } from "react-router-dom";
 
 // Imported Components
-import NavToolBar from "./Containers/Navbar/Navbar";
-import ManageBookings from "./Containers/ManageBookings/BookingContainer/ManageBookings";
-import AboutUs from "./Containers/AboutUs/AboutUs";
-import OurFleet from "./Containers/ManageBookings/OurFleet/OurFleet";
-import OurServices from "./Containers/OurServices/OurServices.jsx";
-import Footer from "./Containers/Footer/Footer";
+import NavToolBar from "./containers/Navbar/Navbar";
+import ManageBookings from "./containers/ManageBookings/BookingContainer/ManageBookings";
+import AboutUs from "./containers/AboutUs/AboutUs.jsx";
+import OurFleet from "./containers/ManageBookings/OurFleet/OurFleet";
+import OurServices from "./containers/OurServices/OurServices.jsx";
+import Footer from "./containers/Footer/Footer";
+// import Maps from "./containers/Maps/Maps";
+import Coverage from "./containers/Coverage/Coverage";
+import DistanceCalculator from "./containers/Distance/Distance";
 
 // Styling
 import {
   Container,
   AppStyle,
 } from "./App.styles.jsx";
-import DistanceCalculator from "./Containers/Distance/Distance";
-import Maps from "./Containers/Maps/Maps";
-import Coverage from "./Containers/Coverage/Coverage";
 
 // App Component
 const App = () => {
   // Hooks
   const [booking, setBookings] = useState("");
-  // Callback Function
-  const callback = (bookings) => {
-    setBookings(bookings);
-    console.log("App Booking", bookings);
-  };
+
   // Render all Components
   return (
     <div>
-      <AppStyle></AppStyle>
+      <AppStyle />
       <Container>
-        <div className="App">
-          <Router>
-            <NavToolBar />
-            <ManageBookings callback={callback} />
-            <AboutUs />
-            <OurServices />
-            <OurFleet />
-            <Coverage />
-            <Footer />
-            <Maps booking={booking} />
-          </Router>
-        </div>
+        <NavToolBar />
+        <ManageBookings
+          setBookings={(bookings) =>
+            setBookings(bookings)
+          }
+        />
+        <AboutUs />
+        <OurServices />
+        <OurFleet />
+        <Coverage />
+        <Footer />
+        {/* <Maps booking={booking} /> */}
       </Container>
     </div>
   );
