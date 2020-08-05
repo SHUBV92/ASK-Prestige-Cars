@@ -18,9 +18,7 @@ class Mailer extends Component {
     this.handleSubmit = this.handleSubmit.bind(
       this
     );
-    console.log("State: ", this.state);
   }
-
 
   // handleChange = event => {
   //   event.preventdefault.value();
@@ -33,46 +31,56 @@ class Mailer extends Component {
   // };
 
   handleSubmit(event) {
+    console.log("State: ", this.state);
+
+    console.log(" Mailer", this.props.bookings);
+
     const messageHtml = renderEmail(
       <MyEmail name={this.props.pickUp}>
         {this.props.name}
       </MyEmail>
     );
-    console.log("message", messageHtml);
+    // console.log("message", messageHtml);
 
-    // Send the booking to the backend 
-    axios({
-      method: "GET",
-      url: "http://localhost:8000/send",
-      data: {
-        pickUp: this.props.bookings.pickUp,
-        destination: this.props.bookings.destination,
-        // messageHtml: messageHtml
-      },
-    }).then((response) => {
-      if (response.data.msg === "success") {
-        alert("Email sent!");
-        // this.resetForm();
-        console.log(
-          "axios data",
-          response.data.msg
-        );
-      } else if (response.data.msg === "fail") {
-        alert(
-          "Oops, something went wrong. Try again"
-        );
-        console.log(
-          "axios data",
-          response.data.msg
-        );
-      }
-    });
-    console.log("Axios Used");
+    // Send the booking to the backend
+
+    fetch("http://localhost:8000/send", {
+      method: "POST",
+    })
+      .then((response) => console.log(response))
+      .then((data) => console.log(data));
+
+    // axios({
+    //   method: "POST",
+    //   url: "http://localhost:8000/send",
+    //   data: {
+    //     pickUp: this.props.bookings.pickUp,
+    //     destination: this.props.bookings.destination,
+    //     // messageHtml: messageHtml
+    //   },
+    // }).then((response) => {
+    //   console.log('hit');
+    //   if (response.data.msg === "success") {
+    //     console.log("Email sent!");
+    //     // this.resetForm();
+    //     console.log(
+    //       "axios data",
+    //       response.data.msg
+    //     );
+    //   } else if (response.data.msg === "fail") {
+    //     console.log(
+    //       "Oops, something went wrong. Try again"
+    //     );
+    //     console.log(
+    //       "axios data",
+    //       response.data.msg
+    //     );
+    //   }
+    // });
+    // console.log("Axios Used");
   }
 
   render() {
-  {console.log(" Mailer", this.props.bookings)}
-
     return (
       <div className="Container">
         <div className="head">
