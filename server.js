@@ -13,11 +13,11 @@ const smtpTransport = require("nodemailer-smtp-transport");
 
 server.listen(process.env.PORT || 8000);
 
-// app.use(express.static(path.join(__dirname, "client/build")));
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
-// app.get("/", function(req, res) {
-//   res.sendFile(path.join(__dirname, "client/build", "index.html"))});
+app.use(express.static(path.join(__dirname, "client/build")));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"))});
 
 // Nodemailer
 app.get("/", (req, res) => {
@@ -26,21 +26,23 @@ app.get("/", (req, res) => {
 
 app.post("/send", (req, res) => {
   console.log("Send");
+  console.log(req);
+
 
   const output = `
       <h1>Conatct Request</h1>
       <p>
           <ul>
           <li>Name: </li>
+           <li>Name: ${req.details.pickUp}</li>
+              <li>Email: ${req.details.destination}</li>
 
           <ul>
       <p>
       
       `;
   {
-    /* <li>Name: ${req.body.name}</li>
-              <li>Email: ${req.body.email}</li>
-              <li>Phone: ${req.body.phone}</li>   */
+    
   }
 
   const transporter = nodemailer.createTransport({

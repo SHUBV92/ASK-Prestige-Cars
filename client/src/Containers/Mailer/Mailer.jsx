@@ -44,8 +44,20 @@ class Mailer extends Component {
 
     // Send the booking to the backend
 
+    console.log("Data", this.props.bookings[0].pickUp)
+
+    const details = {
+      pickUp: this.props.bookings[0].pickUp,
+      destination: this.props.bookings[0].destination
+    }
+
     fetch("http://localhost:8000/send", {
       method: "POST",
+      body:JSON.stringify(details) 
+        
+        //     // messageHtml: messageHtml
+
+      
     })
       .then((response) => console.log(response))
       .then((data) => console.log(data));
