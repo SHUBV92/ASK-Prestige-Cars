@@ -27,7 +27,6 @@ export const Container = styled.div`
     /* background: black; */
   }
 `;
-SPESPECTACLE
 
 export const Img = styled.img`
   width: 100px;
