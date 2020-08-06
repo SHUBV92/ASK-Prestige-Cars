@@ -44,20 +44,24 @@ class Mailer extends Component {
 
     // Send the booking to the backend
 
-    console.log("Data", this.props.bookings[0].pickUp)
+    console.log(
+      "Data",
+      this.props.bookings[0].pickUp
+    );
 
-    const details = {
-      pickUp: this.props.bookings[0].pickUp,
-      destination: this.props.bookings[0].destination
-    }
+    // const details = {
+    //   pickUp: this.props.bookings[0].pickUp,
+    //   destination: this.props.bookings[0].destination
+    // }
 
     fetch("http://localhost:8000/send", {
       method: "POST",
-      body:JSON.stringify(details) 
-        
-        //     // messageHtml: messageHtml
-
-      
+      // body: {
+      //   pickUp: this.props.bookings[0].pickUp,
+      //   destination: this.props.bookings[0]
+      //     .destination,
+      // },
+      //     // messageHtml: messageHtml
     })
       .then((response) => console.log(response))
       .then((data) => console.log(data));
@@ -95,16 +99,12 @@ class Mailer extends Component {
   render() {
     return (
       <div className="Container">
-        <div className="head">
-          <h1>
-            <span>Make a Booking </span>
-          </h1>
-        </div>
+        <div className="head"></div>
         {/* <form Method="post" action="/send"> */}
 
-        <input
+        {/* <input
           value={this.props.bookings.pickUp}
-        />
+        /> */}
         <p>
           <button
             type="submit"

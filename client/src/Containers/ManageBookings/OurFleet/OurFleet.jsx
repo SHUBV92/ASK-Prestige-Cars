@@ -12,8 +12,8 @@ const OurFleet = () => {
   const carCollection = [
     {
       name: "Saloon",
-      passenger: 5,
-      luggage: 5,
+      passenger: 4,
+      luggage: 2,
       description:
         "Our Executive range of cars that are perfect for chauffering and getting you to your destination with ease and comfort",
       image: "saloon.png",
@@ -21,7 +21,7 @@ const OurFleet = () => {
     {
       name: "Executive",
       passenger: 4,
-      luggage: 4,
+      luggage: 3,
       description:
         "Our Executive range of cars that are perfect for chauffering and getting you to your destination with ease and comfort",
       image: "executive.png",
@@ -29,7 +29,15 @@ const OurFleet = () => {
     {
       name: "MPV",
       passenger: 6,
-      luggage: 7,
+      luggage: 3,
+      description:
+        "Our Executive range of cars that are perfect for chauffering and getting you to your destination with ease and comfort",
+      image: "mpv.png",
+    },
+    {
+      name: "Estate",
+      passenger: 4,
+      luggage: 4,
       description:
         "Our Executive range of cars that are perfect for chauffering and getting you to your destination with ease and comfort",
       image: "mpv.png",
@@ -53,7 +61,7 @@ const OurFleet = () => {
             <div className="carinfo">
               <Carousel.Caption>
                 <span className="Passenger">
-                  Pasenger {car.passenger}
+                  Passenger {car.passenger}
                   Luggage {car.luggage}
                 </span>
                 <p>{car.description}</p>

@@ -86,6 +86,13 @@ export const Container = styled.div`
   @media only screen and (min-width: 600px) {
     padding: 50px;
   }
+  /* @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (min-width: 992px) {
+  }
+
+  @media only screen and (min-width: 1200px) {
+  } */
 `;
 
 export const TextBox = styled.div`
@@ -102,9 +109,13 @@ export const TextBox = styled.div`
     padding: 50px;
     padding-right: 200px;
   }
+  /* @media only screen and (min-width: 768px) {
+  } */
 
   @media only screen and (min-width: 992px) {
     padding-left: 100px;
     padding-right: 100px;
   }
+  /* @media only screen and (min-width: 1200px) {
+  } */
 `;

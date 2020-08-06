@@ -6,11 +6,12 @@
 
 import styled from "styled-components";
 
+// The Container for the entire ManageBookings
 export const Container = styled.div`
   /* sizing */
-  padding-top: 50px;
+  padding-top: 15%;
   width: 100%;
-  padding-left: 5%;
+  padding-left: 10%;
   padding-right: 10%;
 
   /* color */
@@ -28,7 +29,28 @@ export const Container = styled.div`
   }
 
   /* Small devices  */
+
+  /* Styles for screens larger then 600px */
   @media only screen and (min-width: 600px) {
+    padding-top: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding-top: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @media only screen and (min-width: 992px) {
+    padding-top: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding-top: 15%;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -45,12 +67,24 @@ export const Info = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 
   @media only screen and (min-width: 600px) {
-    height: 400px;
+    height: 20%;
+  }
+  @media only screen and (min-width: 768px) {
+    height: 20%;
+  }
+
+  @media only screen and (min-width: 992px) {
+    height: 20%;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    height: 20%;
   }
 `;
 
 export const InputContainer = styled.div`
-  width: 90vw;
+  width: 100%;
+  height: 60%;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 15px;
@@ -62,12 +96,30 @@ export const InputContainer = styled.div`
   @media only screen and (min-width: 600px) {
     width: 100%;
     height: 60%;
-    padding-top: 45px;
+    padding-top: 10%;
     /* padding-left: 20%; */
     /* padding-right: 20%; */
   }
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+    height: 60%;
+    padding-top: 10%;
+  }
+
+  @media only screen and (min-width: 992px) {
+    width: 100%;
+    height: 60%;
+    padding-top: 10%;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    width: 100%;
+    height: 60%;
+    padding-top: 10%;
+  }
 `;
 
+// Extra Input Field
 export const Input = styled.div`
   opacity: 1;
 
@@ -99,16 +151,29 @@ export const Details = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 `;
 
+// Search Button
 export const SearchButton = styled.div`
-  padding-top: 2px;
+  padding-top: 7%;
   align-items: center;
   color: red;
 
   @media only screen and (min-width: 600px) {
-  padding-top:7%;
+    padding-top: 7%;
+  }
+  @media only screen and (min-width: 768px) {
+    padding-top: 7%;
+  }
+
+  @media only screen and (min-width: 992px) {
+    padding-top: 7%;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding-top: 7%;
   }
 `;
 
+// Price Field
 export const Price = styled.div`
   padding-top: 2px;
   padding-left: 180px;

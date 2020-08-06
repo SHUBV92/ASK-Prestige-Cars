@@ -6,6 +6,9 @@ import {
   faEnvelope,
   faAngleDown,
 } from "@fortawesome/free-solid-svg-icons";
+
+import FacebookIcon from "@material-ui/icons/Facebook";
+import InstagramIcon from "@material-ui/icons/Instagram";
 import {
   Link,
   animateScroll as scroll,
@@ -50,6 +53,8 @@ const AboutUs = () => {
           icon={faEnvelope}
         />
         {/* </link> */}
+        <FacebookIcon className="icon" />
+        <InstagramIcon className="icon" />
         <br />
         <h3>Get In Touch with us</h3>
         <h4> +44 7907039195 </h4>

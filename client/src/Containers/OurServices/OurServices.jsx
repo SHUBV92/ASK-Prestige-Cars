@@ -6,6 +6,11 @@ import {
   TextBox,
 } from "./OurServices.styles.jsx";
 import { Carousel } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faAngleDown,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   useSpring,
   animated,
@@ -24,7 +29,7 @@ const OurServices = () => {
       name: "Executives",
       description:
         "Executives vehicles available for yourself",
-      image: "Lexus.jpeg",
+      image: "Galaxy.jpeg",
       alt: "First slide",
     },
     {
@@ -36,6 +41,27 @@ const OurServices = () => {
     },
     {
       name: "Chauffering",
+      description:
+        "Vehicles available for yourself to be Chauffered",
+      image: "GalaxySunset.jpg",
+      alt: "Third slide",
+    },
+     {
+      name: "Minicab",
+      description:
+        "Vehicles available for yourself to be Chauffered",
+      image: "GalaxySunset.jpg",
+      alt: "Third slide",
+    },
+    {
+      name: "Coorporate",
+      description:
+        "Vehicles available for yourself to be Chauffered",
+      image: "GalaxySunset.jpg",
+      alt: "Third slide",
+    },
+    {
+      name: "Events",
       description:
         "Vehicles available for yourself to be Chauffered",
       image: "GalaxySunset.jpg",
@@ -66,6 +92,10 @@ const OurServices = () => {
             </Carousel.Item>
           ))}
         </Carousel>
+        <FontAwesomeIcon
+            className="icon"
+            icon={faAngleDown}
+          />
       </Container>
     </animated.div>
   );

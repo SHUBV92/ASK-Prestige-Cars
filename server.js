@@ -30,20 +30,28 @@ app.post("/send", (req, res) => {
 
 
   const output = `
-      <h1>Conatct Request</h1>
+      <h1>Booking Details</h1>
       <p>
           <ul>
           <li>Name: </li>
-           <li>Name: ${req.details.pickUp}</li>
-              <li>Email: ${req.details.destination}</li>
+          <li>Contact Number: </li>
+          <li>Pick up Address: </li>
+          <li>Destination Address: </li>
+          <li>Date: </li>
+          <li>Chosen Car: </li>
+          <li>Passengers: </li>
+          <li>Luggage: </li>
+          <li>Children: </li>
+          <li>Booster Seat: Yes </li>
 
           <ul>
       <p>
       
       `;
-  {
+  
     
-  }
+      // <li>Name: ${req.details.pickUp}</li>
+      // <li>Email: ${req.details.destination}</li>
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -57,7 +65,7 @@ app.post("/send", (req, res) => {
 
   let mailOptions = {
     from: "shubv1992@gmail.com",
-    to: "shubinder92@gmail.com",
+    to: "askpcltd@gmail.com",
     subject: "Contact Request",
     text: "Hello",
     html: output,

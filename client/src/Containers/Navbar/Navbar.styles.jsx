@@ -14,8 +14,7 @@ export const Container = styled.div`
 
   h3 {
     font-size: 10px;
-    color: black;
-    /* padding-left:800px; */
+    /* color: black; */
   }
   .navbar {
     background: linear-gradient(
@@ -28,6 +27,7 @@ export const Container = styled.div`
     /* background: black; */
   }
 `;
+SPESPECTACLE
 
 export const Img = styled.img`
   width: 100px;
@@ -36,24 +36,29 @@ export const Img = styled.img`
 `;
 
 export const NavLinks = styled.div`
-  @media only screen and (min-width: 768px) {
-    padding-left: 70%;
-    color: black;
-  }
-
-  @media only screen and (min-width: 600px) {
-    padding-left: 50%;
-
-  }
-
   Nav-Links {
     text-align: right;
   }
-  .booking {
-    margin-right: 100px;
+  
     h2 {
       padding-left: 100px;
     }
+  }
+  @media only screen and (min-width: 600px) {
+    padding-left: 50%;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding-left: 55%;
+    padding-bottom: 4%;
+    padding-top:1%;
+  }
+  @media only screen and (min-width: 992px) {
+    padding-left: 55%;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding-left: 55%;
   }
 `;
 

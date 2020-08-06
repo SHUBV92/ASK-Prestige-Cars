@@ -8,7 +8,24 @@ import { Container } from "./Footer.styles.jsx";
 // Footer Component
 const Footer = () => {
   return (
-    <Container>
+    <Container id="contact">
+      <div>
+        <label>Name</label>
+        <input 
+        type="text"
+        placeholder="Name"
+        />
+        <label>Phone Number</label>
+        <input 
+        type="text"
+        placeholder="Phone Number"
+        />
+        <label>Message</label>
+        <input 
+        type="text"
+        placeholder="Message"
+        />
+      </div>
       <hr />
       <h3>Book</h3>
       <h3>Services</h3>

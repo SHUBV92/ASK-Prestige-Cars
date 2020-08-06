@@ -7,21 +7,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
-/* Container Styles */
+  /* Container Styles */
   border-radius: 10px;
   background: linear-gradient(
     110deg,
     #f6f6f6 60%,
     #ffff 60%
   );
-/* Text Style */
+  /* Text Style */
   p {
     padding: 20px;
-  }
-/* Styles for screens larger then 600px */
-  @media only screen and (min-width: 600px) {
-    padding: 100px;
   }
 
   h3 {
@@ -32,5 +27,22 @@ export const Container = styled.div`
     font-size: 50px;
     /* padding: 10px; */
     padding-top: 20px;
+  }
+
+  /* Styles for screens larger then 600px */
+  @media only screen and (min-width: 600px) {
+    padding: 10%;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 10%;
+  }
+
+  @media only screen and (min-width: 992px) {
+    padding: 10%;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding: 10%;
   }
 `;

@@ -32,11 +32,11 @@ const NavToolBar = () => {
       linkToScroll: "services",
     },
     {
-      name: "Our Fleet",
+      name: "Fleet",
       linkToScroll: "cars",
     },
     {
-      name: "Contact Us",
+      name: "Contact",
       linkToScroll: "contact",
     },
   ];
@@ -55,7 +55,7 @@ const NavToolBar = () => {
         <NavLinks>
           <Navbar.Brand href="#home">
             ASK Prestige Cars
-            <h3>Our Sevice Your Experience</h3>
+            <h3>Our Sevice. Your Experience</h3>
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -75,7 +75,6 @@ const NavToolBar = () => {
                 </Link>
               ))}
               <Nav.Link href="/bookings">
-                <h3>Make Booking</h3>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

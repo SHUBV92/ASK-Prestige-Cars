@@ -8,15 +8,17 @@ import {
   Dropdown,
 } from "react-bootstrap";
 
-import { Container} from "./Search.styles"
+import { Container } from "./Search.styles";
 
 const Search = () => {
   const [showResults, setShowResults] = useState(
     false
   );
-   // Travel Details
-   const [pickUp, setPickUp] = useState(" ");
-   const [destination, setDestination] = useState(" ");
+  // Travel Details
+  const [pickUp, setPickUp] = useState(" ");
+  const [destination, setDestination] = useState(
+    " "
+  );
 
   // Travel Detail
 
@@ -41,7 +43,6 @@ const Search = () => {
       <h4 onClick={onClicks}>More options</h4>
       {showResults ? (
         <div className="AdditionalInfo">
-          <h1>Results</h1>
           {/* Passengers */}
           <InputGroup className="inputGroup">
             <FormControl
@@ -74,7 +75,45 @@ const Search = () => {
             </DropdownButton>
           </InputGroup>
           <br />
-           {/* Choose Your Car */}
+          {/* Choose Your Car */}
+          <InputGroup className="inputGroup">
+            <FormControl
+              placeholder="Luggage"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+              onChange={handleChooseYourCar}
+            />
+
+            <DropdownButton
+              as={InputGroup.Append}
+              variant="outline-secondary"
+              title=""
+              id="input-group-dropdown-2"
+              className="dropdownButton"
+            >
+              <Dropdown.Item href="#">
+                Saloon: vauxhall Insigjnia or
+                similar
+              </Dropdown.Item>
+              <Dropdown.Item href="#">
+                Estate: Volkswagen Passat Estate
+                or similar
+              </Dropdown.Item>
+              <Dropdown.Item href="#">
+                MPV: Ford Galaxy or similar
+              </Dropdown.Item>
+              <Dropdown.Item href="#">
+                Executive: BMW 5 Series or similar
+              </Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item href="#">
+                More Choices
+              </Dropdown.Item>
+            </DropdownButton>
+          </InputGroup>
+
+          <br />
+
           <InputGroup className="inputGroup">
             <FormControl
               placeholder="Choose Your car"
@@ -91,16 +130,17 @@ const Search = () => {
               className="dropdownButton"
             >
               <Dropdown.Item href="#">
-                Saloon: vauxhall Insigjnia or similar
+                Saloon: Lexus IS or similar
               </Dropdown.Item>
               <Dropdown.Item href="#">
-                Estate: Volkswagen Passat Estate or similar
+                Estate: Volkswagen Passat Estate
+                or similar
               </Dropdown.Item>
               <Dropdown.Item href="#">
-              MPV: Ford Galaxy or similar
+                MPV: Ford Galaxy or similar
               </Dropdown.Item>
               <Dropdown.Item href="#">
-              Executive: BMW 5 Series or similar
+                Executive: BMW 5 Series or similar
               </Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item href="#">

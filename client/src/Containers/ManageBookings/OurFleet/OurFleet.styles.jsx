@@ -38,6 +38,15 @@ export const Container = styled.div`
     padding-right: 150px;
     padding-left: 150px;
   }
+  @media only screen and (min-width: 768px) {
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    padding-right: 200px;
+    padding-left: 200px;
+  }
 
   @media only screen and (min-width: 1200px) {
     padding-right: 200px;
