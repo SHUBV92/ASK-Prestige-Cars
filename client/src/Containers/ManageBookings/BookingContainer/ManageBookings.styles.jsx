@@ -25,7 +25,7 @@ export const Container = styled.div`
 
   h1 {
     font-family: GothamLight;
-    font-size: 30px;
+    font-size: 2.5rem;
   }
 
   /* Small devices  */

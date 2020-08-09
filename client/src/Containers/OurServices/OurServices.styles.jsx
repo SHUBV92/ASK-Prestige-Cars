@@ -101,9 +101,14 @@ export const TextBox = styled.div`
   right: 20px;
   background-color: black;
   color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
   opacity: 0.8;
+  text-align: center;
+
+  h3 {
+    padding: 10%;
+  }
 
   @media only screen and (min-width: 600px) {
     padding: 50px;

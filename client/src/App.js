@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 // Imported Components
-import NavToolBar from "./containers/Navbar/Navbar";
+import NavToolBar from "./containers/Navbar/Navbar.js";
 import ManageBookings from "./containers/ManageBookings/BookingContainer/ManageBookings";
 import AboutUs from "./containers/AboutUs/AboutUs.jsx";
 import OurFleet from "./containers/ManageBookings/OurFleet/OurFleet";

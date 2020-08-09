@@ -46,7 +46,7 @@ const OurServices = () => {
       image: "GalaxySunset.jpg",
       alt: "Third slide",
     },
-     {
+    {
       name: "Minicab",
       description:
         "Vehicles available for yourself to be Chauffered",
@@ -93,9 +93,9 @@ const OurServices = () => {
           ))}
         </Carousel>
         <FontAwesomeIcon
-            className="icon"
-            icon={faAngleDown}
-          />
+          className="icon"
+          icon={faAngleDown}
+        />
       </Container>
     </animated.div>
   );

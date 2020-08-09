@@ -13,7 +13,7 @@ export const Container = styled.div`
   .carinfo {
     /* margin-top: 800px; */
     padding-top: 300px;
-  }
+}
 
   .carousel-caption {
     padding-top: 100px;
@@ -35,21 +35,17 @@ export const Container = styled.div`
 
   /* Mobile  */
   @media only screen and (min-width: 600px) {
-    padding-right: 150px;
-    padding-left: 150px;
+    padding: 10%;
   }
   @media only screen and (min-width: 768px) {
-    padding-right: 200px;
-    padding-left: 200px;
+    padding: 10%;
   }
 
   @media only screen and (min-width: 992px) {
-    padding-right: 200px;
-    padding-left: 200px;
+    padding: 10%;
   }
 
   @media only screen and (min-width: 1200px) {
-    padding-right: 200px;
-    padding-left: 200px;
+    padding: 10%;
   }
 `;

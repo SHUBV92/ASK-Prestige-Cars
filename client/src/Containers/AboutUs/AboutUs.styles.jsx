@@ -18,8 +18,16 @@ export const Container = styled.div`
   p {
     padding: 20px;
   }
-
+  h1 {
+    /* font-family: Gothamlight; */
+  }
   h3 {
+    font-family: Gothamlight;
+  }
+  h4 {
+    font-family: Gothamlight;
+  }
+  h5 {
     font-family: Gothamlight;
   }
 

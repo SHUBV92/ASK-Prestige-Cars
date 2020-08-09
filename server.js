@@ -1,23 +1,30 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const nodemailer = require("nodemailer");
 const app = express();
 const server = require("http").createServer(app);
 // const creds = require("./config");
-const nodemailer = require("nodemailer");
 const smtpTransport = require("nodemailer-smtp-transport");
-
-// const router = require('express').Router()
-// const distance = require('google-distance-matrix')
-// module.exports = router
 
 server.listen(process.env.PORT || 8000);
 
-app.use(express.static(path.join(__dirname, "client/build")));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"))});
+app.use(
+  express.static(
+    path.join(__dirname, "client/build")
+  )
+);
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+app.get("*", function (req, res) {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "client/build",
+      "index.html"
+    )
+  );
+});
 
 // Nodemailer
 app.get("/", (req, res) => {
@@ -26,8 +33,7 @@ app.get("/", (req, res) => {
 
 app.post("/send", (req, res) => {
   console.log("Send");
-  console.log(req);
-
+  console.log(req.body);
 
   const output = `
       <h1>Booking Details</h1>
@@ -48,10 +54,6 @@ app.post("/send", (req, res) => {
       <p>
       
       `;
-  
-    
-      // <li>Name: ${req.details.pickUp}</li>
-      // <li>Email: ${req.details.destination}</li>
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -79,7 +81,10 @@ app.post("/send", (req, res) => {
           error
         );
       }
-      res.send("Send your Email");
+      // res.send("Send your Email");
+      // res.setHeader("Access-Control-Allow-Origin", "https://yoursite.com");
+      // res.header(
+        // "Access-Control-Allow-Headers")
 
       console.log(
         "Message sent: %s",
@@ -113,3 +118,7 @@ app.post("/send", (req, res) => {
 //             res.json(distance.rows)
 //     })
 // })
+
+// const router = require('express').Router()
+// const distance = require('google-distance-matrix')
+// module.exports = router
