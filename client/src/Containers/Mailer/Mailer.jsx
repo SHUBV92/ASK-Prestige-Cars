@@ -39,33 +39,27 @@ class Mailer extends Component {
       this.props.bookings[0].pickUp
     );
 
-    // const details = {
-    //   pickUp: this.props.bookings[0].pickUp,
-    //   destination: this.props.bookings[0].destination
-    // }
-    // return async () => {
-    //   const rawResponse = await 
-      fetch(
-        "http://localhost:8000/send",
-        {
-          method: "POST",
-          // headers: {
-          //   // accept: "application/json",
-          //   contentType: "application/json",
-          // },
-          body: JSON.stringify({
-            pickUp: this.props.bookings[0].pickUp,
-            destination: this.props.bookings[0]
-              .destination,
-          })
-          // const content = await rawResponse.json()
-          // console.log("content", content);
-        }
-        )
-        .then((response) =>
-          console.log("response", response)
-        )
-        .then((data) => console.log(data));
+    const details = {
+      pickUp: this.props.bookings[0].pickUp,
+      destination: this.props.bookings[0]
+        .destination,
+    };
+
+    var data = new FormData();
+    data.append("json", JSON.stringify(details));
+
+    fetch("http://localhost:8000/send", {
+      method: "POST",
+      // headers: {
+      //   // accept: "application/json",
+      //   contentType: "application/json",
+      // },
+      body: data
+    })
+      .then((response) =>
+        console.log("response", response)
+      )
+      .then((data) => console.log(data));
     // };
   }
   render() {

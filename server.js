@@ -31,7 +31,14 @@ app.get("/", (req, res) => {
   res.send("Send Your Email to /send");
 });
 
-app.post("/send", (req, res) => {
+app.post("/send", async (req, res) => {
+  
+  const cat = await category;
+  const url = `https://edamam-recipe-search.p.rapidapi.com/search?q=${cat}&from=0&to=100`
+  fetch(url).then(res => res.json()).then(res => {
+      response.json(json);
+  });
+
   console.log("Send");
   console.log(req.body);
 
