@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 // Imported Components
-import NavToolBar from "./containers/Navbar/Navbar.jsx";
+// import NavToolBar from "./containers/Navbar/Navbar.jsx";
 import ManageBookings from "./containers/ManageBookings/BookingContainer/ManageBookings";
 import AboutUs from "./containers/AboutUs/AboutUs.jsx";
 import OurFleet from "./containers/ManageBookings/OurFleet/OurFleet";
@@ -33,7 +33,7 @@ const App = () => {
     <div>
       <AppStyle />
       <Container>
-        <NavToolBar />
+        {/* <NavToolBar /> */}
         <ManageBookings
           setBookings={(bookings) =>
             setBookings(bookings)
