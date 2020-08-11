@@ -48,13 +48,15 @@ const AboutUs = () => {
           experience with our quality of service.
         </p>
         {/* <link href="info@askprestigecars.co.uk"> */}
-        <FontAwesomeIcon
-          className="icon"
-          icon={faEnvelope}
-        />
-        {/* </link> */}
-        <FacebookIcon className="icon" />
-        <InstagramIcon className="icon" />
+        <div className="icons">
+          <FontAwesomeIcon
+            className="faIcon"
+            icon={faEnvelope}
+          />
+          {/* </link> */}
+          <FacebookIcon className="icon" />
+          <InstagramIcon className="icon" />
+        </div>
         <br />
         <h3>Get In Touch with us</h3>
         <h5> +44 7907039195 </h5>

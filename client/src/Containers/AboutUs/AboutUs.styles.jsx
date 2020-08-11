@@ -31,10 +31,20 @@ export const Container = styled.div`
     font-family: Gothamlight;
   }
 
-  .icon {
+  .icons {
+    font-size: 35px;
+    padding: 15px;
+  }
+
+  /* .icon {
     font-size: 50px;
-    /* padding: 10px; */
+    padding: 10px;
     padding-top: 20px;
+  }
+   */
+  .faIcon {
+    /* margin-top: 10px; */
+    /* font-size: 40px; */
   }
 
   /* Styles for screens larger then 600px */
