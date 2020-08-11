@@ -2,7 +2,8 @@
   "name": "prestige-cars",
   "version": "1.0.0",
   "engines": {
-    "node": "12.x"
+    "node": "13.x",
+    "npm":"6.x"
   },
   "description": "backend",
   "main": "server.js",
