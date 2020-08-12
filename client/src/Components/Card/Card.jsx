@@ -1,5 +1,8 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import {
+  Card,
+  Button,
+} from "react-bootstrap";
 
 const CardView = (props) => (
   <div>
@@ -11,9 +14,13 @@ const CardView = (props) => (
     {console.log("Props", props)}
 
     <Card>
-    <Card.Header>Booking: {props.index}</Card.Header>
+      <Card.Header>
+        Booking: {props.index}
+      </Card.Header>
       <Card.Body>
-        <Card.Title>Name: {props.booking.name}</Card.Title>
+        <Card.Title>
+          Name: {props.booking.name}
+        </Card.Title>
         <Card.Text>
           Travel Date: {props.booking.date}
         </Card.Text>

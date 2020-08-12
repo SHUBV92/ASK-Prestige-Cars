@@ -1,42 +1,42 @@
 // Packages
 import React, { useState } from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 // Imported Components
-// import NavToolBar from "./containers/Navbar/Navbar.jsx";
-// import ManageBookings from "./containers/ManageBookings/BookingContainer/ManageBookings";
-// import AboutUs from "./containers/AboutUs/AboutUs.jsx";
-// import OurFleet from "./containers/ManageBookings/OurFleet/OurFleet";
-// import OurServices from "./containers/OurServices/OurServices.jsx";
-// import Footer from "./containers/Footer/Footer";
-// // import Maps from "./containers/Maps/Maps";
-// import Coverage from "./containers/Coverage/Coverage";
-// import DistanceCalculator from "./containers/Distance/Distance";
+import NavToolBar from "./containers/Navbar/Navbar.jsx";
+import ManageBookings from "./containers/ManageBookings/BookingContainer/ManageBookings";
+import AboutUs from "./containers/AboutUs/AboutUs.jsx";
+import OurFleet from "./containers/ManageBookings/OurFleet/OurFleet";
+import OurServices from "./containers/OurServices/OurServices.jsx";
+import Footer from "./containers/Footer/Footer";
+// import Maps from "./containers/Maps/Maps";
+import Coverage from "./containers/Coverage/Coverage";
+import DistanceCalculator from "./containers/Distance/Distance";
 
 // Styling
 import {
   Container,
   AppStyle,
 } from "./App.styles.jsx";
-import Hello from "./components/hello.jsx";
+// import Hello from "./Components/hello.jsx";
 
 // App Component
 const App = () => {
   // Hooks
-  // const [booking, setBookings] = useState("");
+  const [booking, setBookings] = useState("");
 
   // Render all Components
   return (
     <div>
-      <Hello />
-      {/* <AppStyle />
-      <Container> */}
-        {/* <NavToolBar /> */}
-        {/* <ManageBookings
+      {/* <Hello /> */}
+      <AppStyle />
+      <Container>
+        <NavToolBar />
+        <ManageBookings
           setBookings={(bookings) =>
             setBookings(bookings)
           }
@@ -45,9 +45,9 @@ const App = () => {
         <OurServices />
         <OurFleet />
         <Coverage />
-        <Footer /> */}
+        <Footer />
         {/* <Maps booking={booking} /> */}
-      {/* </Container> */}
+      </Container>
     </div>
   );
 };

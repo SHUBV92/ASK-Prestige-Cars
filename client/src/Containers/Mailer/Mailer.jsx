@@ -1,6 +1,6 @@
 // Packages
 import React, { Component } from "react";
-import axios from "axios";
+import Axios from "axios";
 
 // Imported Components
 import MyEmail from "./MyEmail.jsx";
@@ -38,30 +38,34 @@ class Mailer extends Component {
       "Data",
       this.props.bookings[0].pickUp
     );
-
+    const url = "https://localhost:8000/send";
     const details = {
       pickUp: this.props.bookings[0].pickUp,
       destination: this.props.bookings[0]
         .destination,
     };
+    console.log(JSON.stringify(details));
 
-    var data = new FormData();
-    data.append("json", JSON.stringify(details));
+    // Axios.post(url , details)
+    //   .then(res => {
+    //     console.log(res)
+    //   })
+    //   .catch(err => console.log("Unauthorised", err))
 
-    fetch("http://localhost:8000/send", {
+    fetch(url, {
       method: "POST",
-      // headers: {
-      //   // accept: "application/json",
-      //   contentType: "application/json",
-      // },
-      body: data
+      headers: {
+        Accept: "application/json",
+        // "Content-Type": "application/json"
+      },
+      body: details,
     })
       .then((response) =>
         console.log("response", response)
       )
       .then((data) => console.log(data));
-    // };
-  }
+    };
+  // }
   render() {
     return (
       <div className="Container">

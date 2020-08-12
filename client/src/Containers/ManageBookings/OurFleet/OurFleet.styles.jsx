@@ -13,7 +13,7 @@ export const Container = styled.div`
   .carinfo {
     /* margin-top: 800px; */
     padding-top: 300px;
-}
+  }
 
   .carousel-caption {
     padding-top: 100px;

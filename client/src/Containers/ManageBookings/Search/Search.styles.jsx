@@ -1,9 +1,9 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const Container = styled.div` 
-    background: white;
+export const Container = styled.div`
+  background: white;
 
-    .inputGroup {
-        padding: 10px;
-    }
-`
+  .inputGroup {
+    padding: 10px;
+  }
+`;

@@ -11,16 +11,16 @@ server.listen(process.env.PORT || 8000);
 
 app.use(
   express.static(
-    path.join(__dirname, "client")
+    path.join(__dirname, "client/build")
   )
 );
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.get("*", function (req, res) {
   res.sendFile(
     path.join(
       __dirname,
-      "client",
+      "client/build",
       "index.html"
     )
   );
@@ -31,13 +31,13 @@ app.get("/", (req, res) => {
   res.send("Send Your Email to /send");
 });
 
-app.post("/send", async (req, res) => {
-  
-  const cat = await category;
-  const url = `https://edamam-recipe-search.p.rapidapi.com/search?q=${cat}&from=0&to=100`
-  fetch(url).then(res => res.json()).then(res => {
-      response.json(json);
-  });
+app.post("/send", (req, res) => {
+              
+  // const cat = await category;
+  // const url = `https://edamam-recipe-search.p.rapidapi.com/search?q=${cat}&from=0&to=100`
+  // fetch(url).then(res => res.json()).then(res => {
+  //     response.json(json);
+  // });
 
   console.log("Send");
   console.log(req.body);
@@ -79,7 +79,7 @@ app.post("/send", async (req, res) => {
     text: "Hello",
     html: output,
   };
-  transporter.sendMail(
+  transporter.sendMail( 
     mailOptions,
     (error, info) => {
       if (error) {
