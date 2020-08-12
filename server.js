@@ -14,7 +14,9 @@ app.use(
     path.join(__dirname, "client/build")
   )
 );
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(
+  bodyParser.urlencoded({ extended: false })
+);
 app.use(bodyParser.json());
 app.get("*", function (req, res) {
   res.sendFile(
@@ -32,7 +34,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/send", (req, res) => {
-              
   // const cat = await category;
   // const url = `https://edamam-recipe-search.p.rapidapi.com/search?q=${cat}&from=0&to=100`
   // fetch(url).then(res => res.json()).then(res => {
@@ -79,7 +80,7 @@ app.post("/send", (req, res) => {
     text: "Hello",
     html: output,
   };
-  transporter.sendMail( 
+  transporter.sendMail(
     mailOptions,
     (error, info) => {
       if (error) {
@@ -91,7 +92,7 @@ app.post("/send", (req, res) => {
       // res.send("Send your Email");
       // res.setHeader("Access-Control-Allow-Origin", "https://yoursite.com");
       // res.header(
-        // "Access-Control-Allow-Headers")
+      // "Access-Control-Allow-Headers")
 
       console.log(
         "Message sent: %s",
