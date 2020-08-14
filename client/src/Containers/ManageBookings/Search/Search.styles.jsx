@@ -6,4 +6,8 @@ export const Container = styled.div`
   .inputGroup {
     padding: 10px;
   }
+  .dropdownItem{ 
+    background: purple;
+
+  }
 `;

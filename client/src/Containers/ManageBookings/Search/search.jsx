@@ -91,22 +91,22 @@ const Search = () => {
               id="input-group-dropdown-2"
               className="dropdownButton"
             >
-              <Dropdown.Item href="#">
+              <Dropdown.Item href="#" className="dropDownItem">
                 Saloon: vauxhall Insigjnia or
                 similar
               </Dropdown.Item>
-              <Dropdown.Item href="#">
+              <Dropdown.Item href="#" className="dropDownItem">
                 Estate: Volkswagen Passat Estate
                 or similar
               </Dropdown.Item>
-              <Dropdown.Item href="#">
+              <Dropdown.Item href="#" className="dropDownItem">
                 MPV: Ford Galaxy or similar
               </Dropdown.Item>
-              <Dropdown.Item href="#">
+              <Dropdown.Item href="#" className="dropDownItem">
                 Executive: BMW 5 Series or similar
               </Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="#">
+              <Dropdown.Item href="#" className="dropDownItem">
                 More Choices
               </Dropdown.Item>
             </DropdownButton>
