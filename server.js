@@ -6,6 +6,9 @@ const app = express();
 const server = require("http").createServer(app);
 // const creds = require("./config");
 const smtpTransport = require("nodemailer-smtp-transport");
+const cors = require("cors");
+
+app.use(cors());
 
 server.listen(process.env.PORT || 8000);
 
