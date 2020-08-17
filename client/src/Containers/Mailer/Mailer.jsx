@@ -38,11 +38,13 @@ class Mailer extends Component {
       "Data",
       this.props.bookings[0].pickUp
     );
-    const url = "https://localhost:8000/send";
+    const url = "http://localhost:8000/send";
     const details = {
-      pickUp: this.props.bookings[0].pickUp,
-      destination: this.props.bookings[0]
-        .destination,
+      // pickUp: this.props.bookings[0].pickUp,
+      // destination: this.props.bookings[0]
+      //   .destination,
+      pickUp: "EastHam",
+      destination: "Barking"
     };
     console.log(JSON.stringify(details));
 
@@ -55,15 +57,16 @@ class Mailer extends Component {
     fetch(url, {
       method: "POST",
       headers: {
-        Accept: "application/json",
+        // Accept: "application/json",
         // "Content-Type": "application/json"
       },
-      body: details,
+    body: JSON.stringify({pickUp: "EastHam",
+    destination: "Barking"}),
     })
       .then((response) =>
-        console.log("response", response)
+        console.log("response", response.json())
       )
-      .then((data) => console.log(data));
+      .then((data) => console.log("data", data));
     };
   // }
   render() {

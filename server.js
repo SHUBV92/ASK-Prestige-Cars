@@ -14,18 +14,18 @@ server.listen(process.env.PORT || 8000);
 
 app.use(
   express.static(
-    path.join(__dirname, "client")
+    path.join(__dirname, "./client")
   )
 );
 app.use(bodyParser.json());
 app.use(
-  bodyParser.urlencoded({ extended: false })
+  bodyParser.urlencoded({ extended: true })
 );
 app.get("/", function (req, res) {
   res.sendFile(
     path.join(
       __dirname,
-      "client"
+      "./client"
       // "index.html"
     )
 
@@ -45,7 +45,8 @@ app.post("/send", (req, res) => {
   // });
 
   console.log("Send");
-  console.log(req.body);
+  res.send({ text: "Got the Request" })
+  console.log(req.body.pickUp);
 
   const output = `
       <h1>Booking Details</h1>
