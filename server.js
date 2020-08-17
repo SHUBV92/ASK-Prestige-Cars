@@ -17,18 +17,18 @@ app.use(
     path.join(__dirname, "client")
   )
 );
+app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({ extended: false })
 );
-app.use(bodyParser.json());
 app.get("/", function (req, res) {
   res.sendFile(
     path.join(
       __dirname,
-      "client/public",
-      "index.html"
+      "client"
+      // "index.html"
     )
-    
+
   );
 });
 
