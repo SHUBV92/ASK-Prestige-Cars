@@ -26,7 +26,7 @@ app.get("/", function (req, res) {
     path.join(
       __dirname,
       "client",
-      "index.html"
+      "public/index.html"
     )
   );
 });
