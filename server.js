@@ -28,7 +28,6 @@ app.get("/", function (req, res) {
       "./client"
       // "index.html"
     )
-
   );
 });
 
@@ -38,11 +37,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/send", (req, res) => {
-  // const cat = await category;
-  // const url = `https://edamam-recipe-search.p.rapidapi.com/search?q=${cat}&from=0&to=100`
-  // fetch(url).then(res => res.json()).then(res => {
-  //     response.json(json);
-  // });
 
   console.log("Send");
   res.send({ text: "Got the Request" })
@@ -62,10 +56,8 @@ app.post("/send", (req, res) => {
           <li>Luggage: </li>
           <li>Children: </li>
           <li>Booster Seat: Yes </li>
-
           <ul>
       <p>
-      
       `;
 
   const transporter = nodemailer.createTransport({
