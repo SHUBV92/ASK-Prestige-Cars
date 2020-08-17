@@ -48,12 +48,12 @@ app.post("/send", (req, res) => {
           <ul>
           <li>Name: </li>
           <li>Contact Number: </li>
-          <li>Pick up Address: </li>
-          <li>Destination Address: </li>
-          <li>Date: </li>
+          <li>Pick up Address: ${req.body.pickUp} </li>
+          <li>Destination Address: ${req.body.destination} </li>
+          <li>Date: ${req.body.date} </li>
           <li>Chosen Car: </li>
           <li>Passengers: </li>
-          <li>Luggage: </li>
+          <li>Luggage: ${req.body.luggage}</li>
           <li>Children: </li>
           <li>Booster Seat: Yes </li>
           <ul>

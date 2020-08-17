@@ -40,11 +40,13 @@ class Mailer extends Component {
     );
     const url = "http://localhost:8000/send";
     const details = {
-      // pickUp: this.props.bookings[0].pickUp,
-      // destination: this.props.bookings[0]
-      //   .destination,
-      pickUp: "EastHam",
-      destination: "Barking"
+      pickUp: this.props.bookings[0].pickUp,
+      destination: this.props.bookings[0]
+        .destination,
+        date: this.props.bookings[0].date,
+        luggage: this.props.bookings[0].luggage,
+      // pickUp: "EastHam",
+      // destination: "Barking"
     };
     console.log(JSON.stringify(details));
 
@@ -57,11 +59,10 @@ class Mailer extends Component {
     fetch(url, {
       method: "POST",
       headers: {
-        // Accept: "application/json",
-        // "Content-Type": "application/json"
+        Accept: "application/json",
+        "Content-Type": "application/json"
       },
-    body: JSON.stringify({pickUp: "EastHam",
-    destination: "Barking"}),
+    body: JSON.stringify(details),
     })
       .then((response) =>
         console.log("response", response.json())
