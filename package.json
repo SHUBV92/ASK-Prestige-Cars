@@ -35,8 +35,5 @@
     "nodemailer-smtp-transport": "^2.7.4",
     "nodemon": "^2.0.4",
     "react-geocode": "^0.2.1"
-  },
-  "devDependencies": {
-    "@testing-library/react": "^10.0.4"
   }
 }
