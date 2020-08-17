@@ -28,6 +28,7 @@ app.get("/", function (req, res) {
       "client/public",
       "index.html"
     )
+    
   );
 });
 
