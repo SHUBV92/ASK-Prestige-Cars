@@ -14,18 +14,18 @@ server.listen(process.env.PORT || 8000);
 
 app.use(
   express.static(
-    path.join(__dirname, "../client")
+    path.join(__dirname, "client")
   )
 );
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({ extended: true })
 );
-app.get("/", function (req, res) {
+app.get("*", function (req, res) {
   res.sendFile(
     path.join(
       __dirname,
-      "../client",
+      "client",
       "public/index.html"
     )
   );
