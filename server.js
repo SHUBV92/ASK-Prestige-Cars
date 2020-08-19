@@ -13,7 +13,7 @@ app.use(cors());
 server.listen(process.env.PORT || 8000);
 app.use(bodyParser.json());
 app.use(
-  bodyParser.urlencoded({ extended: true })
+  bodyParser.urlencoded({ extended: false })
 )
 
 app.use(
@@ -35,9 +35,7 @@ app.get("/", function (req, res) {
   );
 });
 
-
 // Nodemailer
-
 app.post("/send", (req, res) => {
 
   console.log("Send");

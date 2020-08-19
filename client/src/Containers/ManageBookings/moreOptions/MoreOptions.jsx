@@ -17,6 +17,7 @@ const MoreOptions = (props) => {
   // Travel Details
   const [passengers, setPassengers] = useState(" ");
   const [luggage, setLuggage] = useState(" ");
+  const [chooseCar, setChooseCar] = useState(" ")
 
 
 
@@ -82,7 +83,7 @@ const MoreOptions = (props) => {
               placeholder="Luggage"
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
-              onChange={handleChooseYourCar}
+              onChange={handleChooseCar}
             />
 
             <DropdownButton
@@ -120,7 +121,7 @@ const MoreOptions = (props) => {
               placeholder="Choose Your car"
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
-              onChange={handleChooseYourCar}
+              onChange={handleChooseCar}
             />
 
             <DropdownButton
@@ -153,7 +154,7 @@ const MoreOptions = (props) => {
             {
               passengers: passengers,
               luggage: luggage,
-              chooseYourCar: ChooseYourCar
+              chooseCar: chooseCar
             }
           )}>Submit</button>
         </div>
