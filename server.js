@@ -30,7 +30,7 @@ app.get("/", function (req, res) {
     path.join(
       __dirname,
       "client/build",
-      "public/index.html"
+      "index.html"
     )
   );
 });
