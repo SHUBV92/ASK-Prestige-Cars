@@ -27,12 +27,11 @@ app.get("/", function (req, res) {
   console.log(process.env.PUBLIC_URL);
 
   res.sendFile(
-    // path.join(
-    //   __dirname,
-    //   "client",
-    //   "public/index.html"
-    // )
-    '/client/public/index.html', { root: __dirname }
+    path.join(
+      __dirname,
+      "client",
+      "public/index.html"
+    )
   );
 });
 
