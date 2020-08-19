@@ -24,6 +24,8 @@ app.use(
 ;
 
 app.get("/", function (req, res) {
+  console.log(process.env.PUBLIC_URL);
+
   res.sendFile(
     path.join(
       __dirname,
