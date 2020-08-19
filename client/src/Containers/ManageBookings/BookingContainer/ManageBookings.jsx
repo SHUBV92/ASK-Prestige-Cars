@@ -3,9 +3,10 @@ import React, { useState } from "react";
 
 // Imported Components
 import Maps from "../../Maps/Maps";
-import JourneyDetails from "../JourneyDetails/JourneyDetails.jsx";
-import Search from "../Search/search.jsx";
+import MoreOptions from "../moreOptions/MoreOptions.jsx";
+import UserDetails from "../userDetails/UserDetails.jsx";
 import Mailer from "../../Mailer/Mailer.jsx";
+
 
 // Styling
 import CardView from "../../../components/Card/Card.jsx";
@@ -41,6 +42,11 @@ const ManageBookings = (props) => {
   // Date
   const [date, setDate] = useState("");
   const [bookings, setBookings] = useState([]);
+
+  // 
+  const [userDetails, setUserDetails] = useState("")
+  const [moreOptions, setMoreOptions] = useState("")
+
 
   // Handle form data functions
 
@@ -96,6 +102,15 @@ const ManageBookings = (props) => {
     console.log("B", bookings);
     props.setBookings(bookings);
   };
+
+  const getUserDetails = (userDetails) => {
+    setName(userDetails.name)
+    setLastName(userDetails.lastName)
+  }
+
+  const getMoreOptions = (moreOptions) => {
+    setMoreOptions(moreOptions)
+  }
   // Collection of Input Fields
   const inputCollection = [
     {
@@ -160,7 +175,12 @@ const ManageBookings = (props) => {
             </Input>
           ))}
         </InputContainer>
-        <Search />
+        <UserDetails
+          getUserDetails={getUserDetails}
+        />
+        <MoreOptions
+        getMoreOptions={getMoreOptions}
+        />
 
         {/* Dynamically calculate the price  */}
         <Price>£70.00</Price>

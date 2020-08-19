@@ -16,23 +16,22 @@ app.use(
   bodyParser.urlencoded({ extended: true })
 )
 
-if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
-  app.use(
-    express.static(
-      path.join(__dirname, "client")
+app.use(
+  express.static(
+    path.join(__dirname, "client")
+  )
+);
+;
+app.get("/", function (req, res) {
+  res.sendFile(
+    path.join(
+      __dirname,
+      "client",
+      "public/index.html"
     )
   );
-  ;
-  app.get("*", function (req, res) {
-    res.sendFile(
-      path.join(
-        __dirname,
-        "client",
-        "public/index.html"
-      )
-    );
-  });
-}
+});
+
 
 // Nodemailer
 app.get("/", (req, res) => {

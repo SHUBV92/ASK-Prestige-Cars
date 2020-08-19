@@ -8,36 +8,37 @@ import {
   Dropdown,
 } from "react-bootstrap";
 
-import { Container } from "./Search.styles";
+import { Container } from "./MoreOptions.styles";
 
-const Search = () => {
+const MoreOptions = (props) => {
   const [showResults, setShowResults] = useState(
     false
   );
   // Travel Details
-  const [pickUp, setPickUp] = useState(" ");
-  const [destination, setDestination] = useState(
-    " "
-  );
+  const [passengers, setPassengers] = useState(" ");
+  const [luggage, setLuggage] = useState(" ");
+
+
 
   // Travel Detail
 
   // Pick Up
   const handlePassengers = (event) => {
-    console.log("Pickup: ", event.target.value);
-    setPickUp(event.target.value);
+    setPassengers(event.target.value);
   };
 
   // Destination
-  const handleChooseYourCar = (event) => {
-    console.log(
-      "Destination: ",
-      event.target.value
-    );
-    setDestination(event.target.value);
+  const handleLuggage = (event) => {
+    setLuggage(event.target.value);
+  };
+  const handleChooseCar = (event) => {
+    setChooseCar(event.target.value);
   };
 
   const onClicks = () => setShowResults(true);
+
+
+
   return (
     <Container>
       <h4 onClick={onClicks}>More options</h4>
@@ -148,10 +149,17 @@ const Search = () => {
               </Dropdown.Item>
             </DropdownButton>
           </InputGroup>
+          <button onClick={this.props.getMoreOptions(
+            {
+              passengers: passengers,
+              luggage: luggage,
+              chooseYourCar: ChooseYourCar
+            }
+          )}>Submit</button>
         </div>
       ) : null}
     </Container>
   );
 };
 
-export default Search;
+export default MoreOptions;
