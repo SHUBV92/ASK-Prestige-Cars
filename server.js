@@ -22,6 +22,7 @@ app.use(
   )
 );
 ;
+
 app.get("/", function (req, res) {
   res.sendFile(
     path.join(
@@ -34,9 +35,6 @@ app.get("/", function (req, res) {
 
 
 // Nodemailer
-app.get("/", (req, res) => {
-  res.send("Send Your Email to /send");
-});
 
 app.post("/send", (req, res) => {
 
