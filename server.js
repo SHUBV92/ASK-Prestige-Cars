@@ -18,7 +18,7 @@ app.use(
 
 app.use(
   express.static(
-    path.join(__dirname, "client/build")
+    path.join(__dirname, "client")
   )
 );
 ;
@@ -29,8 +29,8 @@ app.get("/", function (req, res) {
   res.sendFile(
     path.join(
       __dirname,
-      "client/build",
-      "index.html"
+      "client",
+      "public/index.html"
     )
   );
 });
