@@ -32,7 +32,7 @@ app.get("/", function (req, res) {
     //   "client",
     //   "public/index.html"
     // )
-    'client/public/index.html', { root: __dirname }
+    '/client/public/index.html', { root: __dirname }
   );
 });
 
