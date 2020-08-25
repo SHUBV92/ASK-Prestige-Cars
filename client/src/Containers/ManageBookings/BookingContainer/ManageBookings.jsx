@@ -47,25 +47,18 @@ const ManageBookings = (props) => {
   const [userDetails, setUserDetails] = useState("")
   const [moreOptions, setMoreOptions] = useState("")
 
-
   // Handle form data functions
 
   // Personal Details
   const handleNameChange = (event) => {
-    console.log("Name: ", event.target.value);
     setName(event.target.value);
   };
   // Last name
   const handleLastChange = (event) => {
-    console.log(
-      "Last Name: ",
-      event.target.value
-    );
     setLastName(event.target.value);
   };
   // Date
   const handleDateChange = (event) => {
-    console.log("Date: ", event.target.value);
     setDate(event.target.value);
   };
 
@@ -99,7 +92,6 @@ const ManageBookings = (props) => {
         date: date,
       })
     );
-    console.log("B", bookings);
     props.setBookings(bookings);
   };
 

@@ -7,4 +7,10 @@ export const Container = styled.div`
     padding: 0;
     margin: 0;
   }
+
+  input{
+    padding:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
