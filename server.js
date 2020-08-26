@@ -14,19 +14,15 @@ server.listen(process.env.PORT || 8000);
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({ extended: false })
-)
+);
 
 app.use(
-  express.static(
-    path.join(__dirname, "client")
-  )
+  express.static(path.join(__dirname, "client"))
 );
-;
-
 app.get("/", function (req, res) {
-  console.log(process.env.PUBLIC_URL);
+  console.log(process.env.PUBLIC_URL, __dirname);
 
-  res.sendFile(
+  return res.sendFile(
     path.join(
       __dirname,
       "client",
@@ -37,9 +33,8 @@ app.get("/", function (req, res) {
 
 // Nodemailer
 app.post("/send", (req, res) => {
-
   console.log("Send");
-  res.send({ text: "Got the Request" })
+  res.send({ text: "Got the Request" });
   console.log(req.body.pickUp);
 
   const output = `
