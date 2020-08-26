@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/SHUBV92/ASK-Prestige-Cars/issues"
   },
-  "homepage": "https://github.com/SHUBV92/ASK-Prestige-Cars#readme",
+  "homepage": "https://ask-prestige.herokuapp.com/",
   "dependencies": {
     "axios": "^0.19.2",
     "concurrently": "^5.3.0",
