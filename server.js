@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 // production mode 
 console.log("Environment", process.env.NODE_ENV)
-if(process.env.NODE_ENV === 'production') {  app.use(express.static(path.join(__dirname, 'client/build')))
+if(process.env.NODE_ENV === 'production') {  app.use(express.static(path.join(__dirname, 'client/public/index.html')))
 };  
 //  app.get('*', (req, res) => {    res.sendfile(path.join(__dirname = 'client/build/index.html'));  })}
 server.listen(port, (req, res) => { console.log(`server listening on port: ${port}`)});
