@@ -1,32 +1,38 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const path = require("path");
-const nodemailer = require("nodemailer");
 const app = express();
+const path = require("path");
+const port = process.env.PORT || 8000
+
+const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
 const server = require("http").createServer(app);
-// const creds = require("./config");
 const smtpTransport = require("nodemailer-smtp-transport");
 const cors = require("cors");
 
 app.use(cors());
-
-server.listen(process.env.PORT || 8000);
 app.use(bodyParser.json());
+
+// app.use(
+//   express.static(path.join(__dirname, "client"))
+// );
+
+// production mode 
+console.log("Environment", process.env.NODE_ENV)
+if(process.env.NODE_ENV === 'production') {  app.use(express.static(path.join(__dirname, 'client/build')));  
+//  app.get('*', (req, res) => {    res.sendfile(path.join(__dirname = 'client/build/index.html'));  })}
+server.listen(port, (req, res) => { console.log(`server listening on port: ${port}`)});
+
 app.use(
   bodyParser.urlencoded({ extended: false })
 );
 
-app.use(
-  express.static(path.join(__dirname, "client"))
-);
-app.get("/", function (req, res) {
+app.get("*", function (req, res) {
   console.log(process.env.PUBLIC_URL, __dirname);
 
   return res.sendFile(
     path.join(
       __dirname,
-      "client",
-      "public/index.html"
+      "client/public/index.html"
     )
   );
 });
