@@ -32,7 +32,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "geocode": "0.0.3",
-    "nodemailer": "^6.4.10",
+    "nodemailer": "^6.4.16",
     "nodemailer-smtp-transport": "^2.7.4",
     "nodemon": "^2.0.4",
     "react-geocode": "^0.2.1"
